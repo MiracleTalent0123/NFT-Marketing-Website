@@ -1,0 +1,34 @@
+button {
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.custom-btn {
+  color: white;
+  padding: 10px 25px;
+  background: linear-gradient(256.08deg, #29ce81 -70.01%, #3d7be4 119.37%);
+  border: none;
+  border-radius: 10px;
+}
+
+.box-btn {
+  border: 3px solid #000000;
+  box-shadow: -10px -7px black;
+  margin-left: 10px;
+}
+
+input {
+  outline: none;
+  border: 2.72px solid #7918f2;
+  background: transparent;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+@media (min-width: 1560px) {
+  .custom-btn {
+    padding: 20px 45px;
+  }
+}

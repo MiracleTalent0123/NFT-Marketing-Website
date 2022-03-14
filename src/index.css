@@ -1,0 +1,192 @@
+@import "./assets/styles/index.css";
+
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  /* font-size: 18px; */
+  background-color: #101535;
+  position: relative;
+}
+
+.bg-1 {
+  background: #222950;
+}
+
+.bg-2 {
+  background: #171c3c;
+}
+
+.bg-3 {
+  background: #11183780;
+}
+
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+}
+
+.poppins-font {
+  font-family: Poppins;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.site-container {
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.green {
+  color: #18ca77 !important;
+}
+
+.orange {
+  color: #ff8b37 !important;
+}
+
+.pink {
+  color: #f450c6 !important;
+}
+
+.yellow {
+  color: #ffd232 !important;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.font-size-bg {
+  font-size: 78px;
+  line-height: 102px;
+  font-weight: 700;
+}
+
+.font-size-lg-2 {
+  font-size: 48px;
+}
+
+.font-size-md-1 {
+  font-size: 28px;
+  line-height: 50px;
+}
+
+.font-size-md-2 {
+  font-size: 24px;
+}
+
+.font-size-md-3 {
+  font-size: 22px;
+}
+
+.font-size-md-4 {
+  font-size: 20px;
+}
+
+.font-size-sm-1 {
+  font-size: 18px;
+}
+
+.font-size-sm-2 {
+  font-size: 16px;
+}
+
+.font-size-sm-3 {
+  font-size: 14px;
+}
+
+.section-title {
+  font-size: 56px;
+  line-height: 78px;
+  font-weight: 700;
+}
+
+.opacity-color {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+  max-width: 100% !important;
+  padding: 0 30px;
+}
+
+.border-r-20 {
+  border-radius: 20px;
+}
+
+.border-r-10 {
+  border-radius: 10px;
+}
+
+.border-gradient {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+}
+
+.border-gradient:after {
+  content: "";
+  display: inline-block;
+}
+.border-gradient:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.114) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  padding: 3px;
+  border-radius: 20px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@media (min-width: 1560px) {
+  .font-size-bg {
+    font-size: 104px;
+    line-height: 135px;
+    font-weight: 700;
+  }
+
+  .section-title {
+    font-size: 78px;
+    line-height: 102px;
+    font-weight: 700;
+  }
+
+  .font-size-md-1 {
+    font-size: 28px;
+    line-height: 50px;
+  }
+
+  .container {
+    padding: 0 100px;
+  }
+}
