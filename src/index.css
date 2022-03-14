@@ -148,6 +148,7 @@ p {
   content: "";
   display: inline-block;
 }
+
 .border-gradient:before {
   content: "";
   position: absolute;
