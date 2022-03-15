@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Image src={Bg2} cssClasses={["background-2"]} />
       <Navbar />
       {children}
-      {/* <Footer /> */}
+      <Footer />
       <ScrollToTopButton />
     </Box>
   );

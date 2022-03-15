@@ -10,8 +10,8 @@ const SliderArrow = (props: SliderArrowProps) => {
 
   return (
     <div className={clsx(className, "slider-arrow")} onClick={onClick}>
-      {direction === "next" && <i className="bi bi-chevron-right" />}
-      {direction === "prev" && <i className="bi bi-chevron-left" />}
+      {direction === "next" && <i className="bi bi-arrow-right" />}
+      {direction === "prev" && <i className="bi bi-arrow-left" />}
     </div>
   );
 };

@@ -15,13 +15,27 @@ const About = ({
   color: string;
 }) => {
   return (
-    <Box cssClasses={[`col-md-${col}`, "p-3"]}>
+    <Box cssClasses={[`col-sm-${col}`, "p-3"]}>
       <Box
-        cssClasses={["border-gradient", "border-r-20", "p-4", "bg-3"]}
+        cssClasses={[
+          "border-gradient",
+          "border-r-20",
+          "p-xxl-4",
+          "p-3",
+          "bg-3",
+          "w-100",
+        ]}
         styles={{ backgroundColor: "rgba(17, 24, 55, 0.5)" }}
       >
         <Box
-          cssClasses={["about-icon", "p-3", "border-r-10", "bg-1", "d-table"]}
+          cssClasses={[
+            "about-icon",
+            "p-2",
+            "p-xxl-3",
+            "border-r-10",
+            "bg-1",
+            "d-table",
+          ]}
         >
           <Image src={icon} />
         </Box>

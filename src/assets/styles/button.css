@@ -1,7 +1,7 @@
 button {
   outline: none;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .custom-btn {
@@ -9,7 +9,7 @@ button {
   padding: 10px 25px;
   background: linear-gradient(256.08deg, #29ce81 -70.01%, #3d7be4 119.37%);
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .box-btn {
@@ -27,8 +27,59 @@ input {
   font-size: 20px;
 }
 
+.custom-outline-btn {
+  font-size: 18px;
+  background: linear-gradient(256.08deg, #29ce81 -70.01%, #3d7be4 119.37%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border: none;
+  padding: 10px 20px;
+}
+
+.custom-outline-btn:hover {
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  color: white;
+  border-radius: 8px;
+}
+
+.custom-outline-btn:before {
+  padding: 1px !important;
+  background: linear-gradient(
+    256.08deg,
+    #29ce81 -70.01%,
+    #3d7be4 119.37%
+  ) !important;
+  border-radius: 8px !important;
+}
+
+.custom-input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: left;
+  padding: 15px 10px;
+  background: rgba(255, 255, 255, 0.11);
+}
+
 @media (min-width: 1560px) {
   .custom-btn {
     padding: 20px 45px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  .custom-btn,
+  .custom-input {
+    border-radius: 10px;
+  }
+
+  .custom-input {
+    padding: 20px 15px;
   }
 }

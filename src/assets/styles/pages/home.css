@@ -4,7 +4,7 @@
 
 .about-section {
   margin-top: 100px;
-  padding: 50px 40px;
+  padding: 60px 50px;
 }
 
 .home-section {
@@ -41,9 +41,232 @@
   z-index: -1;
 }
 
+.section {
+  margin-top: 100px;
+}
+
+.tab {
+  font-size: 20px;
+  padding: 8px 40px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: linear-gradient(
+    256.08deg,
+    #29ce81 -70.01%,
+    #3d7be4 119.37%
+  ) !important;
+}
+
+.service {
+  padding: 35px 15px 0;
+  cursor: pointer;
+}
+
+.service-icon {
+  border: 1px solid #ffffff24;
+  width: 80px;
+  padding: 10px 15px !important;
+}
+
+.service-learnmore {
+  padding: 8px 35px;
+  background-color: #1e2448;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.service:hover:before,
+.blog:hover:before {
+  background: linear-gradient(
+    256.08deg,
+    #29ce81 -70.01%,
+    #3d7be4 119.37%
+  ) !important;
+}
+
+.service:hover .service-learnmore {
+  background: linear-gradient(256.08deg, #29ce81 -70.01%, #3d7be4 119.37%);
+  color: white;
+}
+
+.blog:hover button {
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  color: white;
+  border-radius: 8px;
+}
+
+.customer-section {
+  background-image: url(../../images/clients_bg.png);
+  background-size: 100% 100%;
+}
+
+.client {
+  transform: scale(0.7);
+}
+
+.client-content {
+  width: 18%;
+}
+
+.bitcoin-img {
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  transform: translateX(50%);
+  width: 80px;
+}
+
+.eth-img {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  transform: translateX(-50%);
+  width: 80px;
+}
+
+.star1-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+}
+
+.star2-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+}
+
+.blog {
+  cursor: pointer;
+}
+
+.contact-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+}
+
+.contact-section {
+  background-color: rgba(32, 39, 83, 0.46);
+}
+
+.contact-form {
+  background: rgba(16, 21, 53, 0.06);
+  backdrop-filter: blur(86px);
+}
+
+.contact-form:before {
+  padding: 2px !important;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.41) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  ) !important;
+}
+
+.schedule-section {
+  padding: 50px 40px 60px;
+}
+
+.email-section {
+  padding: 100px 0;
+}
+
+.email-form {
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.contact-bg1 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.contact-bg1-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #191f43a3;
+  backdrop-filter: blur(3px);
+}
+
 @media (min-width: 1560px) {
   .about-section {
     margin-top: 104px;
     padding: 112px 88px;
+  }
+
+  .section {
+    margin-top: 200px;
+  }
+
+  .tab {
+    font-size: 28px;
+    padding: 15px 50px;
+  }
+
+  .service {
+    padding: 55px 30px 0;
+  }
+
+  .service-icon {
+    width: 120px;
+    padding: 15px 20px !important;
+  }
+
+  .service-learnmore {
+    padding: 15px 55px;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .client {
+    transform: scale(1);
+  }
+
+  .client-content {
+    width: 19%;
+  }
+
+  .bitcoin-img {
+    width: auto;
+  }
+
+  .eth-img {
+    width: auto;
+  }
+
+  .star1-img,
+  .star2-img {
+    width: auto;
+  }
+
+  .schedule-section {
+    padding: 80px 64px 100px;
+  }
+
+  .email-section {
+    padding: 150px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1559px) {
+  .bitcoin-img {
+    width: 100px;
+  }
+
+  .eth-img {
+    width: 100px;
   }
 }

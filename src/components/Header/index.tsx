@@ -37,7 +37,7 @@ const Navbar = () => {
             className="collapse navbar-collapse justify-content-end"
             id="navbarContent"
           >
-            <ul className="navbar-nav mb-2 mb-lg-0 align-items-md-center">
+            <ul className="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
               {navs.map((nav, index) => (
                 <li key={index} className="nav-item">
                   {location.pathname === "/" ? (
@@ -61,7 +61,7 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
-              <li className="ps-lg-4 ms-lg-4">
+              <li className="ms-lg-4">
                 <Button text="Contact Us" />
               </li>
             </ul>
