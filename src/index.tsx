@@ -11,7 +11,9 @@ import "./index.css";
 import Home from "./pages/Home";
 import reportWebVitals from "./reportWebVitals";
 
-AOS.init();
+AOS.init({
+  duration: 600,
+});
 
 ReactDOM.render(
   <React.StrictMode>

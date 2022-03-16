@@ -148,19 +148,27 @@ const Home = () => {
       <Box cssClasses={["home-content"]}>
         <div id="home" className="home-section text-center container">
           <Box cssClasses={["col-xl-8", "col-lg-10", "m-auto"]}>
-            <p className="text-shadow font-size-bg mt-4">
+            <p className="text-shadow font-size-bg mt-4" data-aos="zoom-in">
               We help crypto & NFT brands go viral
             </p>
-            <p className="font-size-md-1 mt-4">
+            <p
+              className="font-size-md-1 mt-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
               injected humour
             </p>
           </Box>
-          <Button cssClasses={["mt-4"]} text="Let’s Talk" />
+          <div data-aos="fade-up" data-aos-delay="400">
+            <Button cssClasses={["mt-4"]} text="Let’s Talk" />
+          </div>
           <Flex direction="row" justifyContent="center">
             <Box cssClasses={["col-md-10", "mt-3", "col-12"]}>
-              <Image src={HeroImage} width="100%" />
+              <div data-aos="fade-up" data-aos-delay="500">
+                <Image src={HeroImage} width="100%" />
+              </div>
             </Box>
           </Flex>
         </div>
@@ -173,8 +181,14 @@ const Home = () => {
             {/* <Image src={Bg4} cssClasses={["background-4"]} /> */}
             <Flex direction="row" justifyContent="between" alignItems="center">
               <Box cssClasses={["col-lg-5"]}>
-                <p className="section-title">About Us</p>
-                <p className="mt-4 font-size-md-3 opacity-color">
+                <p className="section-title" data-aos="fade-up">
+                  About Us
+                </p>
+                <p
+                  className="mt-4 font-size-md-3 opacity-color"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
                   If you are going to use a passage of Lorem Ipsum, you need to
                   be sure there isn't anything embarrassing hidden in the middle
                   of text. All the Lorem Ipsum generators on the Internet tend
@@ -199,6 +213,7 @@ const Home = () => {
                   {about.map((about, index) => (
                     <About
                       key={index}
+                      index={index}
                       icon={about.icon}
                       num={about.num}
                       desc={about.desc}
@@ -212,23 +227,27 @@ const Home = () => {
           </div>
         </Box>
         <div id="services" className="section container">
-          <p className="section-title text-center">Services</p>
-          <Flex
-            cssClasses={["mt-4", "pt-4"]}
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-          >
-            {serviceTabs.map((tab, index) => (
-              <Tab
-                key={index}
-                tab={tab.tab}
-                id={tab.id}
-                activeTab={activeTab}
-                setActiveTab={(id) => setActiveTab(id)}
-              />
-            ))}
-          </Flex>
+          <p className="section-title text-center" data-aos="fade-up">
+            Services
+          </p>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <Flex
+              cssClasses={["mt-4", "pt-4"]}
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+            >
+              {serviceTabs.map((tab, index) => (
+                <Tab
+                  key={index}
+                  tab={tab.tab}
+                  id={tab.id}
+                  activeTab={activeTab}
+                  setActiveTab={(id) => setActiveTab(id)}
+                />
+              ))}
+            </Flex>
+          </div>
           <Flex
             cssClasses={["mt-4", "pt-4"]}
             direction={"row"}
@@ -242,6 +261,7 @@ const Home = () => {
                 icon={service.icon}
                 title={service.title}
                 desc={service.desc}
+                index={index}
               />
             ))}
           </Flex>
@@ -263,7 +283,9 @@ const Home = () => {
             <Image src={Star1} cssClasses={["star1-img"]} />
             <Image src={Star2} cssClasses={["star2-img"]} />
             <Box cssClasses={["py-xxl-4"]}>
-              <p className="section-title2 text-center">Our Customers</p>
+              <p className="section-title2 text-center" data-aos="fade-up">
+                Our Customers
+              </p>
               <Flex
                 direction={"row"}
                 justifyContent="center"
@@ -281,7 +303,9 @@ const Home = () => {
                       "py-xxl-2",
                     ]}
                   >
-                    <Image cssClasses={["client"]} src={client.image} />
+                    <div data-aos="zoom-in">
+                      <Image cssClasses={["client"]} src={client.image} />
+                    </div>
                   </Box>
                 ))}
               </Flex>
@@ -289,10 +313,14 @@ const Home = () => {
           </Box>
         </div>
         <div id="words" className="section container">
-          <p className="section-title text-center">Words from our Clients</p>
+          <p className="section-title text-center" data-aos="zoom-in">
+            Words from our Clients
+          </p>
         </div>
         <div id="blogs" className="section container">
-          <p className="section-title text-center">Latest Blogs</p>
+          <p className="section-title text-center" data-aos="flip-left">
+            Latest Blogs
+          </p>
           <Box cssClasses={["mt-4", "pt-4", "m-auto", "col-10", "col-md-12"]}>
             <Slider
               {...{
@@ -320,6 +348,7 @@ const Home = () => {
                   title={blog.title}
                   desc={blog.desc}
                   link={blog.link}
+                  index={index}
                 />
               ))}
             </Slider>
@@ -346,102 +375,106 @@ const Home = () => {
             <Box cssClasses={["px-md-4", "py-4"]}>
               <Flex direction={"row"} justifyContent="center">
                 <Box cssClasses={["col-lg-7", "col-11"]}>
-                  <p className="section-title2 text-center">Contact Us</p>
-                  <Box
-                    cssClasses={[
-                      "border-gradient contact-form",
-                      "p-4",
-                      "mt-4",
-                      "w-100",
-                      "border-r-20",
-                    ]}
-                  >
-                    <Flex
-                      direction="row"
-                      justifyContent="space-between"
-                      alignItems="center"
+                  <p className="section-title2 text-center" data-aos="fade-up">
+                    Contact Us
+                  </p>
+                  <div data-aos="fade-up" data-aos-delay="200">
+                    <Box
+                      cssClasses={[
+                        "border-gradient contact-form",
+                        "p-4",
+                        "mt-4",
+                        "w-100",
+                        "border-r-20",
+                      ]}
                     >
-                      <Box
-                        cssClasses={[
-                          "col-md-6",
-                          "col-12",
-                          "pe-xxl-3",
-                          "pe-md-2",
-                        ]}
+                      <Flex
+                        direction="row"
+                        justifyContent="space-between"
+                        alignItems="center"
                       >
-                        <Box>
-                          <label className="font-size-md-4">Name</label>
-                          <input
-                            placeholder="Enter your name here"
-                            type="text"
-                            className="custom-input mt-3 font-size-sm-2"
-                          />
+                        <Box
+                          cssClasses={[
+                            "col-md-6",
+                            "col-12",
+                            "pe-xxl-3",
+                            "pe-md-2",
+                          ]}
+                        >
+                          <Box>
+                            <label className="font-size-md-4">Name</label>
+                            <input
+                              placeholder="Enter your name here"
+                              type="text"
+                              className="custom-input mt-3 font-size-sm-2"
+                            />
+                          </Box>
+                          <Box cssClasses={["mt-4"]}>
+                            <label className="font-size-md-4">Name</label>
+                            <input
+                              type="text"
+                              className="custom-input mt-3 font-size-sm-2"
+                            />
+                          </Box>
+                          <Box cssClasses={["mt-4"]}>
+                            <label className="font-size-md-4">
+                              Contact Number
+                            </label>
+                            <input
+                              type="text"
+                              placeholder="Enter your mobile number here"
+                              className="custom-input mt-3 font-size-sm-2"
+                            />
+                          </Box>
                         </Box>
-                        <Box cssClasses={["mt-4"]}>
-                          <label className="font-size-md-4">Name</label>
-                          <input
-                            type="text"
-                            className="custom-input mt-3 font-size-sm-2"
-                          />
+                        <Box
+                          cssClasses={[
+                            "col-md-6",
+                            "col-12",
+                            "ps-xxl-3",
+                            "ps-md-2",
+                            "pt-4",
+                            "pt-md-0",
+                          ]}
+                        >
+                          <Box>
+                            <label className="font-size-md-4">Email</label>
+                            <input
+                              placeholder="Enter your email here"
+                              type="email"
+                              className="custom-input mt-3 font-size-sm-2"
+                            />
+                          </Box>
+                          <Box cssClasses={["mt-4"]}>
+                            <label className="font-size-md-4">Name</label>
+                            <input
+                              type="text"
+                              className="custom-input mt-3 font-size-sm-2"
+                            />
+                          </Box>
+                          <Box cssClasses={["mt-4"]}>
+                            <label className="font-size-md-4">Website</label>
+                            <input
+                              type="text"
+                              placeholder="Type your website link here"
+                              className="custom-input mt-3 font-size-sm-2"
+                            />
+                          </Box>
                         </Box>
-                        <Box cssClasses={["mt-4"]}>
-                          <label className="font-size-md-4">
-                            Contact Number
-                          </label>
-                          <input
-                            type="text"
-                            placeholder="Enter your mobile number here"
-                            className="custom-input mt-3 font-size-sm-2"
-                          />
-                        </Box>
-                      </Box>
-                      <Box
-                        cssClasses={[
-                          "col-md-6",
-                          "col-12",
-                          "ps-xxl-3",
-                          "ps-md-2",
-                          "pt-4",
-                          "pt-md-0",
-                        ]}
-                      >
-                        <Box>
-                          <label className="font-size-md-4">Email</label>
-                          <input
-                            placeholder="Enter your email here"
-                            type="email"
-                            className="custom-input mt-3 font-size-sm-2"
-                          />
-                        </Box>
-                        <Box cssClasses={["mt-4"]}>
-                          <label className="font-size-md-4">Name</label>
-                          <input
-                            type="text"
-                            className="custom-input mt-3 font-size-sm-2"
-                          />
-                        </Box>
-                        <Box cssClasses={["mt-4"]}>
-                          <label className="font-size-md-4">Website</label>
-                          <input
-                            type="text"
-                            placeholder="Type your website link here"
-                            className="custom-input mt-3 font-size-sm-2"
-                          />
-                        </Box>
-                      </Box>
-                    </Flex>
-                    <Button
-                      text="Send"
-                      cssClasses={["d-flex", "mt-4", "m-auto"]}
-                    />
-                  </Box>
+                      </Flex>
+                      <Button
+                        text="Send"
+                        cssClasses={["d-flex", "mt-4", "m-auto"]}
+                      />
+                    </Box>
+                  </div>
                 </Box>
               </Flex>
             </Box>
           </Box>
         </div>
         <div id="schedule" className="section container">
-          <p className="section-title2 text-center">
+          <p className="section-title2 text-center" data-aos="fade-up">
             Let’s discuss about your project
           </p>
           <Flex
@@ -449,7 +482,11 @@ const Home = () => {
             justifyContent="space-between"
             cssClasses={["mt-4", "bg-2", "schedule-section", "border-r-20"]}
           >
-            <Box cssClasses={["col-lg-5"]}>
+            <div
+              className="col-lg-5"
+              data-aos-delay="200"
+              data-aos="flip-right"
+            >
               <span className="font-nulshock font-size-sm-1 gradient-text">
                 Dentamarketing
               </span>
@@ -476,10 +513,14 @@ const Home = () => {
                   the middle of text. All the Lorem Ipsum generators.
                 </p>
               </Flex>
-            </Box>
-            <Box cssClasses={["col-lg-6", "mt-4", "mt-lg-0"]}>
+            </div>
+            <div
+              className="col-lg-6 mt-4 mt-lg-0"
+              data-aos-delay="200"
+              data-aos="flip-left"
+            >
               <Image src={Union} width="100%" height="100%" />
-            </Box>
+            </div>
           </Flex>
         </div>
         <div id="email" className="container position-relative">
@@ -488,35 +529,41 @@ const Home = () => {
             <Image src={ContactBg1} width="100%" />
           </Box>
           <Box cssClasses={["email-section", "col-md-8", "m-auto"]}>
-            <p className="section-title2 text-center">
+            <p className="section-title2 text-center" data-aos="fade-up">
               Get growth hacking tips!
             </p>
-            <p className="font-size-md-3 text-center mt-4 pb-2">
+            <p
+              className="font-size-md-3 text-center mt-4 pb-2"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               If you are going to use a passage of Lorem Ipsum, you need to be
               sure there isn't anything embarrassing hidden in the middle of
               text. All the Lorem Ipsum generators.
             </p>
-            <Flex
-              cssClasses={[
-                "col-md-6",
-                "mt-4",
-                "m-auto",
-                "border-r-10",
-                "email-form",
-                "p-1",
-              ]}
-              direction="row"
-              justifyContent="space-between"
-            >
-              <form className="d-flex w-100">
-                <input
-                  placeholder="Enter your email here"
-                  type="email"
-                  className="w-100 text-start border-0 font-size-sm-2 ps-2"
-                />
-                <Button text="Subscribe" cssClasses={["font-size-sm-2"]} />
-              </form>
-            </Flex>
+            <div data-aos="fade-up" data-aos-delay="200">
+              <Flex
+                cssClasses={[
+                  "col-md-6",
+                  "mt-4",
+                  "m-auto",
+                  "border-r-10",
+                  "email-form",
+                  "p-1",
+                ]}
+                direction="row"
+                justifyContent="space-between"
+              >
+                <form className="d-flex w-100">
+                  <input
+                    placeholder="Enter your email here"
+                    type="email"
+                    className="w-100 text-start border-0 font-size-sm-2 ps-2"
+                  />
+                  <Button text="Subscribe" cssClasses={["font-size-sm-2"]} />
+                </form>
+              </Flex>
+            </div>
           </Box>
         </div>
       </Box>
