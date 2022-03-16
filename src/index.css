@@ -99,8 +99,8 @@ p {
 }
 
 .font-size-bg {
-  font-size: 78px;
-  line-height: 102px;
+  font-size: 70px;
+  line-height: 90px;
   font-weight: 700;
 }
 
@@ -286,5 +286,34 @@ p {
 @media (min-width: 768px) and (max-width: 1559px) {
   .container {
     padding: 0 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .font-size-bg {
+    font-size: 40px;
+    line-height: 55px;
+    font-weight: 700;
+  }
+
+  .section-title {
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+
+  .section-title2 {
+    font-size: 32px;
+    line-height: 45px;
+    font-weight: 700;
+  }
+
+  .font-size-lg-2 {
+    font-size: 30px;
+  }
+
+  .font-size-md-1 {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

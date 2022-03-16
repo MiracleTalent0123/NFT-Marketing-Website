@@ -21,7 +21,7 @@ const Footer = () => {
     <Box cssClasses={["footer"]}>
       <Box cssClasses={["footer-container"]}>
         <Flex cssClasses={["container"]} direction="row" justifyContent="start">
-          <Box cssClasses={["col-md-3"]}>
+          <Box cssClasses={["col-md-3", "col-12"]}>
             <span className="font-nulshock gradient-text font-size-lg-2 fw-700">
               NFT.M
             </span>
@@ -37,7 +37,7 @@ const Footer = () => {
               ))}
             </Flex>
           </Box>
-          <Box cssClasses={["col-md-2"]}>
+          <Box cssClasses={["col-md-2", "col-12", "mt-4", "mt-md-0"]}>
             <p className="font-size-md-4 fw-700 text-uppercase mb-4">
               Quick links
             </p>
@@ -46,7 +46,7 @@ const Footer = () => {
             <p className="font-size-sm-2 opacity-color mb-3">Testimonials</p>
             <p className="font-size-sm-2 opacity-color">Contact us</p>
           </Box>
-          <Box cssClasses={["col-md-2"]}>
+          <Box cssClasses={["col-md-2", "col-12", "mt-4", "mt-md-0"]}>
             <p className="font-size-md-4 fw-700 text-uppercase mb-4">Info</p>
             <p className="font-size-sm-2 opacity-color mb-3">Reviews</p>
             <p className="font-size-sm-2 opacity-color mb-3">
@@ -56,7 +56,7 @@ const Footer = () => {
               Privacy Statements
             </p>
           </Box>
-          <Box cssClasses={["col-md-2"]}>
+          <Box cssClasses={["col-md-2", "col-12", "mt-4", "mt-md-0"]}>
             <p className="font-size-md-4 fw-700 text-uppercase mb-4">
               Contact Us
             </p>
@@ -69,7 +69,7 @@ const Footer = () => {
               <br /> San Diego, CA 92101
             </p>
           </Box>
-          <Box cssClasses={["col-md-3"]}>
+          <Box cssClasses={["col-md-3", "col-12", "mt-4", "mt-md-0"]}>
             <p className="font-size-md-4 fw-700 text-uppercase mb-4">
               Subscribe to newsletter
             </p>

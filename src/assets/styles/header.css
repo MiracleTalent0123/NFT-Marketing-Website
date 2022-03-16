@@ -167,3 +167,9 @@
     padding-right: 40px;
   }
 }
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 15px 0;
+  }
+}

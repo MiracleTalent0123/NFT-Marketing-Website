@@ -15,7 +15,7 @@ const About = ({
   color: string;
 }) => {
   return (
-    <Box cssClasses={[`col-sm-${col}`, "p-3"]}>
+    <Box cssClasses={[`col-sm-${col}`, "p-3", "col-12"]}>
       <Box
         cssClasses={[
           "border-gradient",

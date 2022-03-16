@@ -147,22 +147,19 @@ const Home = () => {
     <>
       <Box cssClasses={["home-content"]}>
         <div id="home" className="home-section text-center container">
-          <p className="text-shadow font-size-bg mt-4">
-            We help crypto & NFT
-            <br /> brands go viral
-          </p>
-          <p className="font-size-md-1 mt-4">
-            There are many variations of passages of Lorem Ipsum available, but
-            the <br /> majority have suffered alteration in some form, by
-            injected humour
-          </p>
+          <Box cssClasses={["col-xl-8", "col-lg-10", "m-auto"]}>
+            <p className="text-shadow font-size-bg mt-4">
+              We help crypto & NFT brands go viral
+            </p>
+            <p className="font-size-md-1 mt-4">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour
+            </p>
+          </Box>
           <Button cssClasses={["mt-4"]} text="Let’s Talk" />
-          <Flex
-            direction="row"
-            cssClasses={["container"]}
-            justifyContent="center"
-          >
-            <Box cssClasses={["col-md-11", "mt-3"]}>
+          <Flex direction="row" justifyContent="center">
+            <Box cssClasses={["col-md-10", "mt-3", "col-12"]}>
               <Image src={HeroImage} width="100%" />
             </Box>
           </Flex>
@@ -250,7 +247,17 @@ const Home = () => {
           </Flex>
         </div>
         <div id="customers" className="section container">
-          <Box cssClasses={["bg-2", "p-4", "border-r-20", "position-relative"]}>
+          <Box
+            cssClasses={[
+              "bg-2",
+              "p-4",
+              "border-r-20",
+              "position-relative",
+              "m-auto",
+              "col-md-12",
+              "col-10",
+            ]}
+          >
             <Image src={BitcoinImg} cssClasses={["bitcoin-img"]} />
             <Image src={EthImg} cssClasses={["eth-img"]} />
             <Image src={Star1} cssClasses={["star1-img"]} />
@@ -286,7 +293,7 @@ const Home = () => {
         </div>
         <div id="blogs" className="section container">
           <p className="section-title text-center">Latest Blogs</p>
-          <Box cssClasses={["mt-4", "pt-4"]}>
+          <Box cssClasses={["mt-4", "pt-4", "m-auto", "col-10", "col-md-12"]}>
             <Slider
               {...{
                 infinite: true,
@@ -295,6 +302,15 @@ const Home = () => {
                 arrows: true,
                 nextArrow: <SliderArrow direction="next" />,
                 prevArrow: <SliderArrow direction="prev" />,
+                responsive: [
+                  {
+                    breakpoint: 768,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1,
+                    },
+                  },
+                ],
               }}
             >
               {blogs.map((blog, index) => (
@@ -320,16 +336,16 @@ const Home = () => {
         <div id="contact" className="section container">
           <Box
             cssClasses={[
-              "py-4",
+              "py-md-4",
               "position-relative",
               "contact-section",
               "border-r-20",
             ]}
           >
-            <Image src={ContactBg} width="100%" cssClasses={["contact-bg"]} />
-            <Box cssClasses={["p-4"]}>
+            <Image src={ContactBg} cssClasses={["contact-bg"]} />
+            <Box cssClasses={["px-md-4", "py-4"]}>
               <Flex direction={"row"} justifyContent="center">
-                <Box cssClasses={["col-md-7"]}>
+                <Box cssClasses={["col-lg-7", "col-11"]}>
                   <p className="section-title2 text-center">Contact Us</p>
                   <Box
                     cssClasses={[
@@ -345,7 +361,14 @@ const Home = () => {
                       justifyContent="space-between"
                       alignItems="center"
                     >
-                      <Box cssClasses={["col-md-6", "pe-xxl-3", "pe-2"]}>
+                      <Box
+                        cssClasses={[
+                          "col-md-6",
+                          "col-12",
+                          "pe-xxl-3",
+                          "pe-md-2",
+                        ]}
+                      >
                         <Box>
                           <label className="font-size-md-4">Name</label>
                           <input
@@ -372,7 +395,16 @@ const Home = () => {
                           />
                         </Box>
                       </Box>
-                      <Box cssClasses={["col-md-6", "ps-xxl-3", "ps-2"]}>
+                      <Box
+                        cssClasses={[
+                          "col-md-6",
+                          "col-12",
+                          "ps-xxl-3",
+                          "ps-md-2",
+                          "pt-4",
+                          "pt-md-0",
+                        ]}
+                      >
                         <Box>
                           <label className="font-size-md-4">Email</label>
                           <input
@@ -417,7 +449,7 @@ const Home = () => {
             justifyContent="space-between"
             cssClasses={["mt-4", "bg-2", "schedule-section", "border-r-20"]}
           >
-            <Box cssClasses={["col-md-5"]}>
+            <Box cssClasses={["col-lg-5"]}>
               <span className="font-nulshock font-size-sm-1 gradient-text">
                 Dentamarketing
               </span>
@@ -445,7 +477,7 @@ const Home = () => {
                 </p>
               </Flex>
             </Box>
-            <Box cssClasses={["col-md-6"]}>
+            <Box cssClasses={["col-lg-6", "mt-4", "mt-lg-0"]}>
               <Image src={Union} width="100%" height="100%" />
             </Box>
           </Flex>

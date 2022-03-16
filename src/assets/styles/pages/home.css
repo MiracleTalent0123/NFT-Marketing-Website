@@ -3,8 +3,8 @@
 }
 
 .about-section {
-  margin-top: 100px;
-  padding: 60px 50px;
+  margin-top: 70px;
+  padding: 30px 20px;
 }
 
 .home-section {
@@ -104,11 +104,11 @@
 }
 
 .client {
-  transform: scale(0.7);
+  transform: scale(0.8);
 }
 
 .client-content {
-  width: 18%;
+  width: 100%;
 }
 
 .bitcoin-img {
@@ -151,10 +151,13 @@
   left: 0;
   z-index: -1;
   height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .contact-section {
   background-color: rgba(32, 39, 83, 0.46);
+  overflow: hidden;
 }
 
 .contact-form {
@@ -172,11 +175,11 @@
 }
 
 .schedule-section {
-  padding: 50px 40px 60px;
+  padding: 30px 20px;
 }
 
 .email-section {
-  padding: 100px 0;
+  padding: 80px 0;
 }
 
 .email-form {
@@ -236,7 +239,7 @@
   }
 
   .client-content {
-    width: 19%;
+    width: 20%;
   }
 
   .bitcoin-img {
@@ -262,11 +265,75 @@
 }
 
 @media (min-width: 768px) and (max-width: 1559px) {
+  .about-section {
+    padding: 60px 50px;
+  }
+
+  .schedule-section {
+    padding: 50px 40px 60px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1559px) {
+  .client {
+    transform: scale(0.6);
+  }
+
+  .client-content {
+    width: 20%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .client {
+    transform: scale(0.5);
+  }
+
+  .client-content {
+    width: 25%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .client {
+    transform: scale(0.7);
+  }
+
+  .client-content {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1559px) {
   .bitcoin-img {
     width: 100px;
   }
 
   .eth-img {
     width: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-bg1 {
+    height: 100%;
+  }
+
+  .contact-bg1 > img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .star1-img,
+  .star2-img {
+    width: 50%;
+  }
+
+  .eth-img {
+    top: 2%;
+  }
+
+  .bitcoin-img {
+    bottom: 2%;
   }
 }
