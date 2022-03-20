@@ -16,8 +16,8 @@ const Blog = ({
   index: number;
 }) => {
   return (
-    <Box cssClasses={["px-xxl-3", "px-2"]}>
-      <div data-aos="fade-up" data-aos-delay={(index + 1) * 100}>
+    <Box cssClasses={["px-xxl-3", "p-2"]}>
+      <div data-aos="fade-up" data-aos-delay={index * 100}>
         <Box
           cssClasses={[
             "p-xxl-4",

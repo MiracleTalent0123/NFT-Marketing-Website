@@ -12,101 +12,6 @@
   position: relative;
 }
 
-.background-1 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 70%;
-  z-index: -1;
-}
-
-.background-2 {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-  width: 60%;
-}
-
-.background-3 {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: -1;
-}
-
-.background-4 {
-  position: absolute;
-  right: 0%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-}
-
-.background-5 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60%;
-  left: -25%;
-  bottom: -60%;
-}
-
-.background-6 {
-  position: absolute;
-  left: -5%;
-  width: 60%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.background-7 {
-  position: absolute;
-  right: 0%;
-  width: 45%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.background-8 {
-  position: absolute;
-  width: 60%;
-  transform: translateY(-50%);
-  top: 40%;
-}
-
-.background-9 {
-  position: absolute;
-  right: 0;
-  width: 45%;
-  bottom: -30%;
-}
-
-.background-10 {
-  position: absolute;
-  right: 0;
-  width: 30%;
-  top: 100%;
-  transform: translateY(-50%);
-}
-
-.background-11 {
-  position: absolute;
-  top: 60%;
-  width: 65%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-.background-12 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
-
 .section {
   margin-top: 100px;
 }
@@ -143,7 +48,8 @@
 }
 
 .service:hover:before,
-.blog:hover:before {
+.blog:hover:before,
+.testimonial:hover:before {
   background: linear-gradient(
     256.08deg,
     #29ce81 -70.01%,
@@ -154,6 +60,46 @@
 .service:hover .service-learnmore {
   background: linear-gradient(256.08deg, #29ce81 -70.01%, #3d7be4 119.37%);
   color: white;
+}
+
+.testimonial {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.testimonial:hover {
+  opacity: 1;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.testimonial-logo {
+  width: 60px;
+  transform: translateX(25%);
+}
+
+.testimonial-twitter {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  width: 25px;
+}
+
+.left-quotes {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+}
+
+.right-quotes {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  width: 20px;
 }
 
 .blog:hover button {
@@ -271,7 +217,141 @@
   backdrop-filter: blur(3px);
 }
 
+.background-1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70%;
+  z-index: -1;
+}
+
+.background-2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  width: 60%;
+}
+
+.background-3 {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.background-4 {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.background-5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  left: -25%;
+  bottom: -60%;
+}
+
+.background-6 {
+  position: absolute;
+  left: -5%;
+  width: 60%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.background-7 {
+  position: absolute;
+  right: 0%;
+  width: 45%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.background-8 {
+  position: absolute;
+  width: 60%;
+  transform: translateY(-50%);
+  top: 40%;
+}
+
+.background-9 {
+  position: absolute;
+  right: 0;
+  width: 45%;
+  bottom: -30%;
+}
+
+.background-10 {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  top: 100%;
+  transform: translateY(-50%);
+}
+
+.background-11 {
+  position: absolute;
+  top: 60%;
+  width: 65%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.background-12 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.background-13 {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
 @media (min-width: 1560px) {
+  .testimonial-logo {
+    width: 90px;
+  }
+
+  .testimonial-avatar {
+    width: 65px;
+  }
+
+  .testimonial-twitter {
+    width: auto;
+    top: -5px;
+    right: -5px;
+  }
+
+  .left-quotes {
+    width: auto;
+    top: -5px;
+    left: -5px;
+  }
+
+  .right-quotes {
+    width: auto;
+    bottom: -5px;
+    right: 0px;
+  }
+
+  .testimonial-desc {
+    line-height: 32px;
+  }
+
   .about-section {
     margin-top: 104px;
     padding: 112px 88px;

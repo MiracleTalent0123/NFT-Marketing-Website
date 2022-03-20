@@ -36,6 +36,9 @@ import Bg7 from "../../assets/images/Ellipse_50.png";
 import Bg8 from "../../assets/images/Ellipse_51.png";
 import Bg9 from "../../assets/images/Ellipse_53.png";
 import Bg from "../../assets/images/bg.png";
+import Avatar from "../../assets/images/avatar.png";
+import AvatarLogo from "../../assets/images/t_logo.png";
+import Testimonial from "../../components/Testimonial";
 
 const Home = () => {
   const about = [
@@ -115,7 +118,7 @@ const Home = () => {
     },
   ];
 
-  const clients = [
+  const customers = [
     { image: Client1 },
     { image: Client2 },
     { image: Client3 },
@@ -126,6 +129,37 @@ const Home = () => {
     { image: Client1 },
     { image: Client2 },
     { image: Client4 },
+  ];
+
+  const testimonials = [
+    {
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+      avatar: Avatar,
+      name: "Carl Mahnke",
+      role: "HYATT HOTELS",
+      logo: AvatarLogo,
+    },
+    {
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+      avatar: Avatar,
+      name: "Carl Mahnke",
+      role: "HYATT HOTELS",
+      logo: AvatarLogo,
+    },
+    {
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+      avatar: Avatar,
+      name: "Carl Mahnke",
+      role: "HYATT HOTELS",
+      logo: AvatarLogo,
+    },
+    {
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+      avatar: Avatar,
+      name: "Carl Mahnke",
+      role: "HYATT HOTELS",
+      logo: AvatarLogo,
+    },
   ];
 
   const blogs = [
@@ -270,7 +304,7 @@ const Home = () => {
             data-aos-delay="200"
           >
             <Flex
-              cssClasses={["mt-4", "pt-4"]}
+              cssClasses={["mt-4", "pt-2"]}
               direction="row"
               justifyContent="center"
               alignItems="center"
@@ -290,7 +324,7 @@ const Home = () => {
             <Image src={Bg} cssClasses={["background-6"]} />
             <Image src={Bg4} cssClasses={["background-7"]} />
             <Flex
-              cssClasses={["mt-4", "pt-4", "position-relative", "container"]}
+              cssClasses={["mt-4", "pt-2", "position-relative", "container"]}
               direction={"row"}
               justifyContent="space-between"
               alignItems="center"
@@ -331,7 +365,7 @@ const Home = () => {
                 alignItems="center"
                 cssClasses={["py-4"]}
               >
-                {clients.map((client, index) => (
+                {customers.map((client, index) => (
                   <Box
                     key={index}
                     cssClasses={[
@@ -355,6 +389,52 @@ const Home = () => {
           <p className="section-title text-center" data-aos="zoom-in">
             Words from our Clients
           </p>
+          <Box
+            cssClasses={[
+              "mt-4",
+              "position-relative",
+              "col-10",
+              "col-md-12",
+              "m-auto",
+            ]}
+          >
+            <Image src={Bg5} cssClasses={["background-13"]} />
+            <Slider
+              {...{
+                infinite: true,
+                autoplay: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding: "30%",
+                arrows: true,
+                nextArrow: <SliderArrow direction="next" />,
+                prevArrow: <SliderArrow direction="prev" />,
+                responsive: [
+                  {
+                    breakpoint: 768,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1,
+                      centerMode: false,
+                    },
+                  },
+                ],
+              }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <Testimonial
+                  key={index}
+                  index={index}
+                  desc={testimonial.desc}
+                  avatar={testimonial.avatar}
+                  name={testimonial.name}
+                  role={testimonial.role}
+                  logo={testimonial.logo}
+                />
+              ))}
+            </Slider>
+          </Box>
         </div>
         <div id="blogs" className="section position-relative">
           <Image src={Bg5} cssClasses={["background-8"]} />
@@ -363,7 +443,7 @@ const Home = () => {
             <p className="section-title text-center" data-aos="flip-left">
               Latest Blogs
             </p>
-            <Box cssClasses={["mt-4", "pt-4", "m-auto", "col-10", "col-md-12"]}>
+            <Box cssClasses={["mt-4", "pt-2", "m-auto", "col-10", "col-md-12"]}>
               <Slider
                 {...{
                   infinite: true,
@@ -525,7 +605,10 @@ const Home = () => {
         <div id="schedule" className="section position-relative">
           <Image src={Bg8} cssClasses={["background-11"]} />
           <div className="container">
-            <p className="section-title2 text-center" data-aos="fade-up">
+            <p
+              className="section-title2 text-center pb-xxl-4 pb-2"
+              data-aos="fade-up"
+            >
               Let’s discuss about your project
             </p>
             <Flex
