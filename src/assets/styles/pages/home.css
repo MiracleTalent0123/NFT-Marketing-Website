@@ -164,11 +164,6 @@
   border-radius: 8px;
 }
 
-.customer-section {
-  background-image: url(../../images/clients_bg.png);
-  background-size: 100% 100%;
-}
-
 .client {
   transform: scale(0.8);
 }
