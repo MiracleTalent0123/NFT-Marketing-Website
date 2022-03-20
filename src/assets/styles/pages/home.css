@@ -5,6 +5,7 @@
 .about-section {
   margin-top: 70px;
   padding: 30px 20px;
+  overflow: hidden;
 }
 
 .home-section {
@@ -30,15 +31,80 @@
 .background-3 {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
 }
 
 .background-4 {
   position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.background-5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  left: -25%;
+  bottom: -60%;
+}
+
+.background-6 {
+  position: absolute;
+  left: -5%;
+  width: 60%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.background-7 {
+  position: absolute;
+  right: 0%;
+  width: 45%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.background-8 {
+  position: absolute;
+  width: 60%;
+  transform: translateY(-50%);
+  top: 40%;
+}
+
+.background-9 {
+  position: absolute;
   right: 0;
-  top: 0;
-  z-index: -1;
+  width: 45%;
+  bottom: -30%;
+}
+
+.background-10 {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  top: 100%;
+  transform: translateY(-50%);
+}
+
+.background-11 {
+  position: absolute;
+  top: 60%;
+  width: 65%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.background-12 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .section {
@@ -172,6 +238,11 @@
     rgba(255, 255, 255, 0.41) 0%,
     rgba(255, 255, 255, 0.05) 100%
   ) !important;
+}
+
+#schedule > .container {
+  z-index: 10;
+  position: relative;
 }
 
 .schedule-section {

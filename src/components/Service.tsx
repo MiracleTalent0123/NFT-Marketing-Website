@@ -14,7 +14,7 @@ const Service = ({
   index: number;
 }) => {
   return (
-    <Box cssClasses={["col-md-4", "col-lg-3", "p-3", "text-center"]}>
+    <Box cssClasses={["col-md-6", "col-lg-3", "p-3", "text-center"]}>
       <div data-aos="flip-left" data-aos-delay={(index + 1) * 100}>
         <Box cssClasses={["border-gradient", "service", "bg-5", "border-r-20"]}>
           <Image

@@ -4,15 +4,18 @@ import useNav from "../../hooks/useNav";
 import { Link } from "react-router-dom";
 import NavbarToggler from "./NavbatToggler";
 import Button from "../common/Button";
+import Logo from "../../assets/images/logo.png";
+import Flex from "../common/Flex";
+import Image from "../common/Image";
 
 const Navbar = () => {
   const navs = [
-    { menu: "Services", scrollLink: "home", link: "" },
+    { menu: "Services", scrollLink: "services", link: "" },
     { menu: "Clients", scrollLink: "", link: "" },
-    { menu: "Testimonials", scrollLink: "", link: "" },
-    { menu: "How we work", scrollLink: "", link: "" },
+    { menu: "Testimonials", scrollLink: "testimonials", link: "" },
+    { menu: "Blogs", scrollLink: "", link: "/blogs" },
     { menu: "Case Studies", scrollLink: "", link: "" },
-    { menu: "Team", scrollLink: "", link: "" },
+    { menu: "About Us", scrollLink: "", link: "/aboutus" },
   ];
 
   const [navbarOpen] = useNav(false);
@@ -23,7 +26,10 @@ const Navbar = () => {
       <nav id="header" className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container d-flex justify-content-between">
           <Link to="/" className="navbar-brand pointer p-0">
-            NFT.M
+            <Flex direction="row" justifyContent="start" alignItems="center">
+              <Image src={Logo} cssClasses={["logo-img"]} />
+              <p className="ms-2">DetaMarketing</p>
+            </Flex>
           </Link>
           <button
             className="navbar-toggler border-0 outline-none p-0"
@@ -41,14 +47,25 @@ const Navbar = () => {
               {navs.map((nav, index) => (
                 <li key={index} className="nav-item">
                   {location.pathname === "/" ? (
-                    <ScrollLink
-                      activeClass="active"
-                      className="nav-link white px-0 py-2 pointer"
-                      to={nav.scrollLink}
-                      spy={true}
-                    >
-                      {nav.menu}
-                    </ScrollLink>
+                    nav.scrollLink ? (
+                      <ScrollLink
+                        activeClass="active"
+                        className="nav-link white px-0 py-2 pointer"
+                        to={nav.scrollLink}
+                        spy={true}
+                      >
+                        {nav.menu}
+                      </ScrollLink>
+                    ) : (
+                      <Link
+                        className={`nav-link white px-0 py-2 pointer ${
+                          location.pathname === nav.link && "active"
+                        }`}
+                        to={nav.link}
+                      >
+                        {nav.menu}
+                      </Link>
+                    )
                   ) : (
                     <Link
                       className={`nav-link white px-0 py-2 pointer ${
@@ -61,8 +78,8 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
-              <li className="ms-lg-4">
-                <Button text="Contact Us" />
+              <li>
+                <Button text="Become NFT & Crypto Influencer" />
               </li>
             </ul>
           </div>

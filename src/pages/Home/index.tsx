@@ -18,8 +18,6 @@ import Client2 from "../../assets/images/Client-Logos_John-Hancock.png";
 import Client3 from "../../assets/images/Client-Logos_NXP.png";
 import Client4 from "../../assets/images/Client-Logos_AIG.png";
 import Client5 from "../../assets/images/Client-Logos_Kuoni.png";
-import BitcoinImg from "../../assets/images/bitcoin.png";
-import EthImg from "../../assets/images/eth.png";
 import Star1 from "../../assets/images/star1.png";
 import Star2 from "../../assets/images/star2.png";
 import BlogImg from "../../assets/images/blog.png";
@@ -30,6 +28,14 @@ import ContactBg from "../../assets/images/contact.png";
 import ClockImg from "../../assets/images/clock.png";
 import Union from "../../assets/images/union.png";
 import ContactBg1 from "../../assets/images/contact_bg.png";
+import Bg3 from "../../assets/images/bg3.png";
+import Bg4 from "../../assets/images/Ellipse_47.png";
+import Bg5 from "../../assets/images/Ellipse_49.png";
+import Bg6 from "../../assets/images/Ellipse_48.png";
+import Bg7 from "../../assets/images/Ellipse_50.png";
+import Bg8 from "../../assets/images/Ellipse_51.png";
+import Bg9 from "../../assets/images/Ellipse_53.png";
+import Bg from "../../assets/images/bg.png";
 
 const Home = () => {
   const about = [
@@ -60,13 +66,33 @@ const Home = () => {
 
   const serviceTabs = [
     { id: 1, tab: "Best Sellers" },
-    { id: 2, tab: "Service 1" },
-    { id: 3, tab: "Service 2" },
-    { id: 4, tab: "Service 3" },
-    { id: 5, tab: "Service 4" },
+    { id: 2, tab: "Twitter" },
+    { id: 3, tab: "Instagram" },
+    { id: 4, tab: "YouTube" },
+    { id: 5, tab: "Tiktok" },
   ];
 
   const services = [
+    {
+      icon: ServiceIcon1,
+      title: "Bitcoin Promotion",
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.",
+    },
+    {
+      icon: ServiceIcon2,
+      title: "Service 2",
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.",
+    },
+    {
+      icon: ServiceIcon3,
+      title: "Service 3",
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.",
+    },
+    {
+      icon: ServiceIcon4,
+      title: "Service 4",
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.",
+    },
     {
       icon: ServiceIcon1,
       title: "Bitcoin Promotion",
@@ -173,12 +199,12 @@ const Home = () => {
           </Flex>
         </div>
         <Box cssClasses={["container", "position-relative"]}>
-          {/* <Image src={Bg3} cssClasses={["background-3"]} /> */}
+          <Image src={Bg3} cssClasses={["background-3"]} />
+          <Image src={Bg} cssClasses={["background-5"]} />
           <div
             id="aboutus"
             className="about-section bg-2 border-r-20 position-relative"
           >
-            {/* <Image src={Bg4} cssClasses={["background-4"]} /> */}
             <Flex direction="row" justifyContent="between" alignItems="center">
               <Box cssClasses={["col-lg-5"]}>
                 <p className="section-title" data-aos="fade-up">
@@ -203,7 +229,15 @@ const Home = () => {
                 </p>
               </Box>
               <Box cssClasses={["col-lg-1"]} />
-              <Box cssClasses={["col-lg-6", "mt-4", "mt-lg-0"]}>
+              <Box
+                cssClasses={[
+                  "col-lg-6",
+                  "mt-4",
+                  "mt-lg-0",
+                  "position-relative",
+                ]}
+              >
+                <Image src={Bg} cssClasses={["background-4"]} />
                 <Flex
                   direction="row"
                   justifyContent="justify-between"
@@ -226,11 +260,15 @@ const Home = () => {
             </Flex>
           </div>
         </Box>
-        <div id="services" className="section container">
-          <p className="section-title text-center" data-aos="fade-up">
+        <div id="services" className="section">
+          <p className="section-title text-center container" data-aos="fade-up">
             Services
           </p>
-          <div data-aos="fade-up" data-aos-delay="200">
+          <div
+            className="position-relative container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <Flex
               cssClasses={["mt-4", "pt-4"]}
               direction="row"
@@ -248,38 +286,39 @@ const Home = () => {
               ))}
             </Flex>
           </div>
-          <Flex
-            cssClasses={["mt-4", "pt-4"]}
-            direction={"row"}
-            justifyContent="space-between"
-            alignItems="center"
-            styles={{ margin: "0 -16px" }}
-          >
-            {services.map((service, index) => (
-              <Service
-                key={index}
-                icon={service.icon}
-                title={service.title}
-                desc={service.desc}
-                index={index}
-              />
-            ))}
-          </Flex>
+          <div className="position-relative">
+            <Image src={Bg} cssClasses={["background-6"]} />
+            <Image src={Bg4} cssClasses={["background-7"]} />
+            <Flex
+              cssClasses={["mt-4", "pt-4", "position-relative", "container"]}
+              direction={"row"}
+              justifyContent="space-between"
+              alignItems="center"
+            >
+              {services.map((service, index) => (
+                <Service
+                  key={index}
+                  icon={service.icon}
+                  title={service.title}
+                  desc={service.desc}
+                  index={index}
+                />
+              ))}
+            </Flex>
+          </div>
         </div>
         <div id="customers" className="section container">
           <Box
             cssClasses={[
               "bg-2",
-              "p-4",
               "border-r-20",
               "position-relative",
               "m-auto",
               "col-md-12",
-              "col-10",
+              "col-12",
+              "py-4",
             ]}
           >
-            <Image src={BitcoinImg} cssClasses={["bitcoin-img"]} />
-            <Image src={EthImg} cssClasses={["eth-img"]} />
             <Image src={Star1} cssClasses={["star1-img"]} />
             <Image src={Star2} cssClasses={["star2-img"]} />
             <Box cssClasses={["py-xxl-4"]}>
@@ -312,216 +351,230 @@ const Home = () => {
             </Box>
           </Box>
         </div>
-        <div id="words" className="section container">
+        <div id="testimonials" className="section container">
           <p className="section-title text-center" data-aos="zoom-in">
             Words from our Clients
           </p>
         </div>
-        <div id="blogs" className="section container">
-          <p className="section-title text-center" data-aos="flip-left">
-            Latest Blogs
-          </p>
-          <Box cssClasses={["mt-4", "pt-4", "m-auto", "col-10", "col-md-12"]}>
-            <Slider
-              {...{
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                arrows: true,
-                nextArrow: <SliderArrow direction="next" />,
-                prevArrow: <SliderArrow direction="prev" />,
-                responsive: [
-                  {
-                    breakpoint: 768,
-                    settings: {
-                      slidesToShow: 1,
-                      slidesToScroll: 1,
+        <div id="blogs" className="section position-relative">
+          <Image src={Bg5} cssClasses={["background-8"]} />
+          <Image src={Bg6} cssClasses={["background-9"]} />
+          <div className="container">
+            <p className="section-title text-center" data-aos="flip-left">
+              Latest Blogs
+            </p>
+            <Box cssClasses={["mt-4", "pt-4", "m-auto", "col-10", "col-md-12"]}>
+              <Slider
+                {...{
+                  infinite: true,
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  arrows: true,
+                  nextArrow: <SliderArrow direction="next" />,
+                  prevArrow: <SliderArrow direction="prev" />,
+                  responsive: [
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                      },
                     },
-                  },
-                ],
-              }}
-            >
-              {blogs.map((blog, index) => (
-                <Blog
-                  key={index}
-                  img={blog.image}
-                  title={blog.title}
-                  desc={blog.desc}
-                  link={blog.link}
-                  index={index}
-                />
-              ))}
-            </Slider>
-          </Box>
-          <Box cssClasses={["pt-4"]}>
-            <Button
-              text="Read all blogs"
-              outline
-              cssClasses={["mt-4", "m-auto", "d-flex", "font-size-sm-1"]}
-              styles={{ padding: "20px 50px" }}
-            />
-          </Box>
-        </div>
-        <div id="contact" className="section container">
-          <Box
-            cssClasses={[
-              "py-md-4",
-              "position-relative",
-              "contact-section",
-              "border-r-20",
-            ]}
-          >
-            <Image src={ContactBg} cssClasses={["contact-bg"]} />
-            <Box cssClasses={["px-md-4", "py-4"]}>
-              <Flex direction={"row"} justifyContent="center">
-                <Box cssClasses={["col-lg-7", "col-11"]}>
-                  <p className="section-title2 text-center" data-aos="fade-up">
-                    Contact Us
-                  </p>
-                  <div data-aos="fade-up" data-aos-delay="200">
-                    <Box
-                      cssClasses={[
-                        "border-gradient contact-form",
-                        "p-4",
-                        "mt-4",
-                        "w-100",
-                        "border-r-20",
-                      ]}
-                    >
-                      <Flex
-                        direction="row"
-                        justifyContent="space-between"
-                        alignItems="center"
-                      >
-                        <Box
-                          cssClasses={[
-                            "col-md-6",
-                            "col-12",
-                            "pe-xxl-3",
-                            "pe-md-2",
-                          ]}
-                        >
-                          <Box>
-                            <label className="font-size-md-4">Name</label>
-                            <input
-                              placeholder="Enter your name here"
-                              type="text"
-                              className="custom-input mt-3 font-size-sm-2"
-                            />
-                          </Box>
-                          <Box cssClasses={["mt-4"]}>
-                            <label className="font-size-md-4">Name</label>
-                            <input
-                              type="text"
-                              className="custom-input mt-3 font-size-sm-2"
-                            />
-                          </Box>
-                          <Box cssClasses={["mt-4"]}>
-                            <label className="font-size-md-4">
-                              Contact Number
-                            </label>
-                            <input
-                              type="text"
-                              placeholder="Enter your mobile number here"
-                              className="custom-input mt-3 font-size-sm-2"
-                            />
-                          </Box>
-                        </Box>
-                        <Box
-                          cssClasses={[
-                            "col-md-6",
-                            "col-12",
-                            "ps-xxl-3",
-                            "ps-md-2",
-                            "pt-4",
-                            "pt-md-0",
-                          ]}
-                        >
-                          <Box>
-                            <label className="font-size-md-4">Email</label>
-                            <input
-                              placeholder="Enter your email here"
-                              type="email"
-                              className="custom-input mt-3 font-size-sm-2"
-                            />
-                          </Box>
-                          <Box cssClasses={["mt-4"]}>
-                            <label className="font-size-md-4">Name</label>
-                            <input
-                              type="text"
-                              className="custom-input mt-3 font-size-sm-2"
-                            />
-                          </Box>
-                          <Box cssClasses={["mt-4"]}>
-                            <label className="font-size-md-4">Website</label>
-                            <input
-                              type="text"
-                              placeholder="Type your website link here"
-                              className="custom-input mt-3 font-size-sm-2"
-                            />
-                          </Box>
-                        </Box>
-                      </Flex>
-                      <Button
-                        text="Send"
-                        cssClasses={["d-flex", "mt-4", "m-auto"]}
-                      />
-                    </Box>
-                  </div>
-                </Box>
-              </Flex>
-            </Box>
-          </Box>
-        </div>
-        <div id="schedule" className="section container">
-          <p className="section-title2 text-center" data-aos="fade-up">
-            Let’s discuss about your project
-          </p>
-          <Flex
-            direction={"row"}
-            justifyContent="space-between"
-            cssClasses={["mt-4", "bg-2", "schedule-section", "border-r-20"]}
-          >
-            <div
-              className="col-lg-5"
-              data-aos-delay="200"
-              data-aos="flip-right"
-            >
-              <span className="font-nulshock font-size-sm-1 gradient-text">
-                Dentamarketing
-              </span>
-              <p className="font-size-lg-2 fw-700 mt-xxl-4 mt-2">
-                Discovery call
-              </p>
-              <Flex
-                direction={"row"}
-                alignItems="center"
-                justifyContent="start"
-                cssClasses={["pt-xxl-4", "pt-2", "mt-2"]}
+                  ],
+                }}
               >
-                <Image src={ClockImg} width="40px" />
-                <span className="font-size-md-2 ms-3 mt-1">45 min</span>
-                <p className="font-size-md-3 opacity-color mt-xxl-4 mt-3">
-                  If you are going to use a passage of Lorem Ipsum, you need to
-                  be sure there isn't anything embarrassing hidden in the middle
-                  of text. All the Lorem Ipsum generators on the Internet tend
-                  to repeat predefined chunks as necessary, making this the
-                  first true generator on the Internet.
-                  <br />
-                  <br /> If you are going to use a passage of Lorem Ipsum, you
-                  need to be sure there isn't anything embarrassing hidden in
-                  the middle of text. All the Lorem Ipsum generators.
-                </p>
-              </Flex>
-            </div>
-            <div
-              className="col-lg-6 mt-4 mt-lg-0"
-              data-aos-delay="200"
-              data-aos="flip-left"
+                {blogs.map((blog, index) => (
+                  <Blog
+                    key={index}
+                    img={blog.image}
+                    title={blog.title}
+                    desc={blog.desc}
+                    link={blog.link}
+                    index={index}
+                  />
+                ))}
+              </Slider>
+            </Box>
+            <Box cssClasses={["pt-4"]}>
+              <Button
+                text="Read all blogs"
+                outline
+                cssClasses={["mt-4", "m-auto", "d-flex", "font-size-sm-1"]}
+                styles={{ padding: "20px 50px" }}
+              />
+            </Box>
+          </div>
+        </div>
+        <div id="contact" className="section position-relative">
+          <Image src={Bg7} cssClasses={["background-10"]} />
+          <div className="container">
+            <Box
+              cssClasses={[
+                "py-md-4",
+                "position-relative",
+                "contact-section",
+                "border-r-20",
+              ]}
             >
-              <Image src={Union} width="100%" height="100%" />
-            </div>
-          </Flex>
+              <Image src={ContactBg} cssClasses={["contact-bg"]} />
+              <Box cssClasses={["px-md-4", "py-4"]}>
+                <Flex direction={"row"} justifyContent="center">
+                  <Box cssClasses={["col-lg-7", "col-11"]}>
+                    <p
+                      className="section-title2 text-center"
+                      data-aos="fade-up"
+                    >
+                      Contact Us
+                    </p>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                      <Box
+                        cssClasses={[
+                          "border-gradient contact-form",
+                          "p-4",
+                          "mt-4",
+                          "w-100",
+                          "border-r-20",
+                        ]}
+                      >
+                        <Flex
+                          direction="row"
+                          justifyContent="space-between"
+                          alignItems="center"
+                        >
+                          <Box
+                            cssClasses={[
+                              "col-md-6",
+                              "col-12",
+                              "pe-xxl-3",
+                              "pe-md-2",
+                            ]}
+                          >
+                            <Box>
+                              <label className="font-size-md-4">Name</label>
+                              <input
+                                placeholder="Enter your name here"
+                                type="text"
+                                className="custom-input mt-3 font-size-sm-2"
+                              />
+                            </Box>
+                            <Box cssClasses={["mt-4"]}>
+                              <label className="font-size-md-4">Name</label>
+                              <input
+                                type="text"
+                                className="custom-input mt-3 font-size-sm-2"
+                              />
+                            </Box>
+                            <Box cssClasses={["mt-4"]}>
+                              <label className="font-size-md-4">
+                                Contact Number
+                              </label>
+                              <input
+                                type="text"
+                                placeholder="Enter your mobile number here"
+                                className="custom-input mt-3 font-size-sm-2"
+                              />
+                            </Box>
+                          </Box>
+                          <Box
+                            cssClasses={[
+                              "col-md-6",
+                              "col-12",
+                              "ps-xxl-3",
+                              "ps-md-2",
+                              "pt-4",
+                              "pt-md-0",
+                            ]}
+                          >
+                            <Box>
+                              <label className="font-size-md-4">Email</label>
+                              <input
+                                placeholder="Enter your email here"
+                                type="email"
+                                className="custom-input mt-3 font-size-sm-2"
+                              />
+                            </Box>
+                            <Box cssClasses={["mt-4"]}>
+                              <label className="font-size-md-4">Name</label>
+                              <input
+                                type="text"
+                                className="custom-input mt-3 font-size-sm-2"
+                              />
+                            </Box>
+                            <Box cssClasses={["mt-4"]}>
+                              <label className="font-size-md-4">Website</label>
+                              <input
+                                type="text"
+                                placeholder="Type your website link here"
+                                className="custom-input mt-3 font-size-sm-2"
+                              />
+                            </Box>
+                          </Box>
+                        </Flex>
+                        <Button
+                          text="Send"
+                          cssClasses={["d-flex", "mt-4", "m-auto"]}
+                        />
+                      </Box>
+                    </div>
+                  </Box>
+                </Flex>
+              </Box>
+            </Box>
+          </div>
+        </div>
+        <div id="schedule" className="section position-relative">
+          <Image src={Bg8} cssClasses={["background-11"]} />
+          <div className="container">
+            <p className="section-title2 text-center" data-aos="fade-up">
+              Let’s discuss about your project
+            </p>
+            <Flex
+              direction={"row"}
+              justifyContent="space-between"
+              cssClasses={["mt-4", "bg-2", "schedule-section", "border-r-20"]}
+            >
+              <div
+                className="col-lg-5"
+                data-aos-delay="200"
+                data-aos="flip-right"
+              >
+                <span className="font-nulshock font-size-sm-1 gradient-text">
+                  Dentamarketing
+                </span>
+                <p className="font-size-lg-2 fw-700 mt-xxl-4 mt-2">
+                  Discovery call
+                </p>
+                <Flex
+                  direction={"row"}
+                  alignItems="center"
+                  justifyContent="start"
+                  cssClasses={["pt-xxl-4", "pt-2", "mt-2"]}
+                >
+                  <Image src={ClockImg} width="40px" />
+                  <span className="font-size-md-2 ms-3 mt-1">45 min</span>
+                  <p className="font-size-md-3 opacity-color mt-xxl-4 mt-3">
+                    If you are going to use a passage of Lorem Ipsum, you need
+                    to be sure there isn't anything embarrassing hidden in the
+                    middle of text. All the Lorem Ipsum generators on the
+                    Internet tend to repeat predefined chunks as necessary,
+                    making this the first true generator on the Internet.
+                    <br />
+                    <br /> If you are going to use a passage of Lorem Ipsum, you
+                    need to be sure there isn't anything embarrassing hidden in
+                    the middle of text. All the Lorem Ipsum generators.
+                  </p>
+                </Flex>
+              </div>
+              <div
+                className="col-lg-6 mt-4 mt-lg-0 position-relative"
+                data-aos-delay="200"
+                data-aos="flip-left"
+              >
+                <Image src={Bg9} cssClasses={["background-12"]} />
+                <Image src={Union} width="100%" height="100%" />
+              </div>
+            </Flex>
+          </div>
         </div>
         <div id="email" className="container position-relative">
           <Box cssClasses={["contact-bg1"]}>
