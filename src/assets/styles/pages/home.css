@@ -264,6 +264,7 @@
   width: 60%;
   top: 50%;
   transform: translateY(-50%);
+  z-index: -1;
 }
 
 .background-7 {
@@ -272,6 +273,7 @@
   width: 45%;
   top: 50%;
   transform: translateY(-50%);
+  z-index: -1;
 }
 
 .background-8 {
@@ -354,7 +356,7 @@
 
   .about-section {
     margin-top: 104px;
-    padding: 112px 88px;
+    padding: 88px;
   }
 
   .section {
@@ -412,7 +414,7 @@
 
 @media (min-width: 768px) and (max-width: 1559px) {
   .about-section {
-    padding: 60px 50px;
+    padding: 50px;
   }
 
   .schedule-section {

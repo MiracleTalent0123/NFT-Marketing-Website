@@ -12,12 +12,12 @@ const About = ({
   icon: any;
   num: number;
   desc: string;
-  col: number;
+  col?: number;
   color: string;
   index: number;
 }) => {
   return (
-    <Box cssClasses={[`col-sm-${col}`, "p-3", "col-12"]}>
+    <Box cssClasses={[`col-sm-${col ? col : "auto"}`, "p-3", "col-12"]}>
       <div data-aos="flip-up" data-aos-delay={index * 100}>
         <Box
           cssClasses={[
@@ -40,7 +40,7 @@ const About = ({
               "d-table",
             ]}
           >
-            <Image src={icon} />
+            <Image src={icon} width="30px" />
           </Box>
           <Box>
             <p className={`font-size-lg-2 fw-700 ${color}`}>{num}+</p>

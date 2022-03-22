@@ -2,6 +2,8 @@ import React from "react";
 import ScrollToTopButton from "./ScrollToTopButton";
 import Navbar from "./Header";
 import Footer from "./Footer";
+import ContactForm from "./Contact/ContactForm";
+import Schedule from "./Contact/Schedule";
 import Box from "./common/Box";
 import Image from "./common/Image";
 import Bg1 from "../assets/images/bg1.png";
@@ -14,6 +16,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Image src={Bg2} cssClasses={["background-2"]} />
       <Navbar />
       {children}
+      <ContactForm />
+      <Schedule />
       <Footer />
       <ScrollToTopButton />
     </Box>

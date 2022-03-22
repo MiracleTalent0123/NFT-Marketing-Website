@@ -4,12 +4,13 @@ import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Layout from "./components/Layout";
 import "./index.css";
+
+import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import reportWebVitals from "./reportWebVitals";
+import AboutUs from "./pages/About";
 
 AOS.init({
   duration: 600,
@@ -20,6 +21,7 @@ ReactDOM.render(
     <Router>
       <Layout>
         <Switch>
+          <Route path="/aboutus" component={AboutUs} />
           <Route path="/" component={Home} />
         </Switch>
       </Layout>

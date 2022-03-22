@@ -30,6 +30,14 @@ const useNav = (initialNavbarOpen: boolean) => {
           setNavbarOpen(false);
         });
       });
+
+    [].slice
+      .call(header.querySelectorAll(".nav-link"))
+      .forEach((link: HTMLAnchorElement) => {
+        link.addEventListener("click", (e) => {
+          setNavbarOpen(false);
+        });
+      });
   }, []);
 
   useEffect(() => {

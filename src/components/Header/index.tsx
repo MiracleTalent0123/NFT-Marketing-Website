@@ -50,7 +50,7 @@ const Navbar = () => {
                     nav.scrollLink ? (
                       <ScrollLink
                         activeClass="active"
-                        className="nav-link white px-0 py-2 pointer"
+                        className="nav-link nav-animation-link white px-0 py-2 pointer"
                         to={nav.scrollLink}
                         spy={true}
                       >
