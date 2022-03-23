@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Flex from "../../components/common/Flex";
 import Box from "../../components/common/Box";
 import Image from "../../components/common/Image";
@@ -125,6 +126,48 @@ const Home = () => {
   ];
 
   const testimonials = [
+    {
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+      avatar: Avatar,
+      name: "Carl Mahnke",
+      role: "HYATT HOTELS",
+      logo: AvatarLogo,
+    },
+    {
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+      avatar: Avatar,
+      name: "Carl Mahnke",
+      role: "HYATT HOTELS",
+      logo: AvatarLogo,
+    },
+    {
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+      avatar: Avatar,
+      name: "Carl Mahnke",
+      role: "HYATT HOTELS",
+      logo: AvatarLogo,
+    },
+    {
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+      avatar: Avatar,
+      name: "Carl Mahnke",
+      role: "HYATT HOTELS",
+      logo: AvatarLogo,
+    },
+    {
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+      avatar: Avatar,
+      name: "Carl Mahnke",
+      role: "HYATT HOTELS",
+      logo: AvatarLogo,
+    },
+    {
+      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+      avatar: Avatar,
+      name: "Carl Mahnke",
+      role: "HYATT HOTELS",
+      logo: AvatarLogo,
+    },
     {
       desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
       avatar: Avatar,
@@ -378,9 +421,9 @@ const Home = () => {
             </Box>
           </Box>
         </div>
-        <div id="testimonials" className="section container">
-          <p className="section-title text-center" data-aos="zoom-in">
-            Words from our Clients
+        <div id="testimonials" className="section">
+          <p className="section-title text-center container" data-aos="zoom-in">
+            Words From Our Clients
           </p>
           <Box
             cssClasses={[
@@ -393,11 +436,13 @@ const Home = () => {
           >
             <Image src={Bg5} cssClasses={["background-13"]} />
             <Slider
+              className="testimonial-slider"
               {...{
                 infinite: true,
                 autoplay: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
+                rows: 2,
                 centerMode: true,
                 centerPadding: "30%",
                 arrows: true,
@@ -469,12 +514,14 @@ const Home = () => {
               </Slider>
             </Box>
             <Box cssClasses={["pt-4"]}>
-              <Button
-                text="Read all blogs"
-                outline
-                cssClasses={["mt-4", "m-auto", "d-flex", "font-size-sm-1"]}
-                styles={{ padding: "20px 50px" }}
-              />
+              <Link to="/blogs">
+                <Button
+                  text="Read all blogs"
+                  outline
+                  cssClasses={["mt-4", "m-auto", "d-flex", "font-size-sm-1"]}
+                  styles={{ padding: "20px 50px" }}
+                />
+              </Link>
             </Box>
           </div>
         </div>

@@ -7,6 +7,8 @@ import FaceBook from "../../assets/images/Facebook.png";
 import LinkedIN from "../../assets/images/LinkedIN.png";
 import Telegram from "../../assets/images/Telegram.png";
 import Button from "../common/Button";
+import Logo from "../../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialIcons = [
@@ -22,16 +24,24 @@ const Footer = () => {
       <Box cssClasses={["footer-container"]}>
         <Flex cssClasses={["container"]} direction="row" justifyContent="start">
           <Box cssClasses={["col-md-3", "col-12"]}>
-            <span className="font-nulshock gradient-text font-size-lg-2 fw-700">
-              NFT.M
-            </span>
+            <Link to="/" className="navbar-brand pointer p-0">
+              <Flex direction="row" justifyContent="start" alignItems="center">
+                <Image src={Logo} cssClasses={["footer-logo-img"]} />
+                <p className="ms-2 font-size-md-1" style={{ color: "white" }}>
+                  DetaMarketing
+                </p>
+              </Flex>
+            </Link>
             <p className="font-size-sm-3 opacity-color mt-2 pe-4">
               There are many variations of passages of
               <br /> majority have suffered alteration in some form
             </p>
             <Flex direction="row" justifyContent="start" cssClasses={["mt-3"]}>
               {socialIcons.map((icon, index) => (
-                <Box key={index} cssClasses={["social-icon", "me-4"]}>
+                <Box
+                  key={index}
+                  cssClasses={["social-icon", "me-xxl-4", "me-3"]}
+                >
                   <Image src={icon.icon} />
                 </Box>
               ))}
@@ -63,7 +73,9 @@ const Footer = () => {
             <p className="font-size-sm-2 opacity-color mb-3">
               Phone: 45749494984947
             </p>
-            <p className="font-size-sm-2 opacity-color mb-3">info@airbnb.com</p>
+            <p className="font-size-sm-2 opacity-color mb-3">
+              support@detamarketing.com
+            </p>
             <p className="font-size-sm-2 opacity-color mb-3">
               101 West Broadway, Ste 300
               <br /> San Diego, CA 92101

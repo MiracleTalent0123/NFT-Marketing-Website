@@ -13,7 +13,7 @@ const Navbar = () => {
     { menu: "Services", scrollLink: "services", link: "" },
     { menu: "Clients", scrollLink: "", link: "" },
     { menu: "Testimonials", scrollLink: "testimonials", link: "" },
-    { menu: "Blogs", scrollLink: "", link: "/blogs" },
+    { menu: "Blogs", scrollLink: "blogs", link: "/blogs" },
     { menu: "Case Studies", scrollLink: "", link: "" },
     { menu: "About Us", scrollLink: "", link: "/aboutus" },
   ];

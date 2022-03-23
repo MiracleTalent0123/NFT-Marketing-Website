@@ -11,6 +11,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import reportWebVitals from "./reportWebVitals";
 import AboutUs from "./pages/About";
+import Blogs from "./pages/Blogs";
 
 AOS.init({
   duration: 600,
@@ -21,6 +22,7 @@ ReactDOM.render(
     <Router>
       <Layout>
         <Switch>
+          <Route path="/blogs" component={Blogs} />
           <Route path="/aboutus" component={AboutUs} />
           <Route path="/" component={Home} />
         </Switch>

@@ -40,7 +40,7 @@ const Testimonial = ({
             <Image src={RightQuotes} cssClasses={["right-quotes"]} />
             <Box cssClasses={["p-4"]}>
               <Box cssClasses={["p-xxl-2"]}>
-                <p className="font-size-sm-1 testimonial-desc">{desc}</p>
+                <p className="font-size-sm-1 testimonial-desc mt-2">{desc}</p>
               </Box>
             </Box>
           </Box>
