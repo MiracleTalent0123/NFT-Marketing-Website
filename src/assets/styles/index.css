@@ -6,5 +6,6 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 @import "./slider.css";
 @import "./scrollbar.css";
+@import "./select.css";
 @import "./pages/home.css";
 @import "./pages/about.css";

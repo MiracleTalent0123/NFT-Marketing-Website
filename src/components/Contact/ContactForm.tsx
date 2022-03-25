@@ -4,123 +4,198 @@ import Box from "../common/Box";
 import Button from "../common/Button";
 import ContactBg from "../../assets/images/contact.png";
 import Bg7 from "../../assets/images/Ellipse_50.png";
+import ContactBg1 from "../../assets/images/contact_bg.png";
+import ReactSelect from "../common/Select";
+import { BUDGETS, SERVICES } from "../../constants";
 
 const ContactForm = () => {
+  const setBudgetSelected = (value: string) => {
+    console.log(value);
+  };
+
   return (
-    <div id="contact" className="section position-relative">
-      <Image src={Bg7} cssClasses={["background-10"]} />
-      <div className="container">
-        <Box
-          cssClasses={[
-            "py-md-4",
-            "position-relative",
-            "contact-section",
-            "border-r-20",
-          ]}
-        >
-          <Image src={ContactBg} cssClasses={["contact-bg"]} />
-          <Box cssClasses={["px-md-4", "py-4"]}>
-            <Flex direction={"row"} justifyContent="center">
-              <Box cssClasses={["col-lg-7", "col-11"]}>
-                <p className="section-title2 text-center" data-aos="fade-up">
-                  Contact Us
-                </p>
-                <div data-aos="fade-up" data-aos-delay="200">
-                  <Box
-                    cssClasses={[
-                      "border-gradient contact-form",
-                      "p-4",
-                      "mt-4",
-                      "w-100",
-                      "border-r-20",
-                    ]}
-                  >
-                    <Flex
-                      direction="row"
-                      justifyContent="space-between"
-                      alignItems="center"
+    <>
+      <div id="contact" className="section position-relative">
+        <Image src={Bg7} cssClasses={["background-10"]} />
+
+        <div className="container">
+          <Box
+            cssClasses={[
+              "py-md-4",
+              "position-relative",
+              "contact-section",
+              "border-r-20",
+            ]}
+          >
+            <Image src={ContactBg} cssClasses={["contact-bg"]} />
+            <Box cssClasses={["px-md-4", "py-4"]}>
+              <Flex direction={"row"} justifyContent="center">
+                <Box cssClasses={["col-lg-7", "col-11"]}>
+                  <p className="section-title2 text-center" data-aos="fade-up">
+                    Contact Us
+                  </p>
+                  <div data-aos="fade-up" data-aos-delay="200">
+                    <Box
+                      cssClasses={[
+                        "border-gradient contact-form",
+                        "p-4",
+                        "mt-4",
+                        "w-100",
+                        "border-r-20",
+                      ]}
                     >
-                      <Box
-                        cssClasses={[
-                          "col-md-6",
-                          "col-12",
-                          "pe-xxl-3",
-                          "pe-md-2",
-                        ]}
+                      <Flex
+                        direction="row"
+                        justifyContent="space-between"
+                        alignItems="center"
                       >
-                        <Box>
-                          <label className="font-size-md-4">Name</label>
-                          <input
-                            placeholder="Enter your name here"
-                            type="text"
-                            className="custom-input mt-3 font-size-sm-2"
-                          />
+                        <Box
+                          cssClasses={[
+                            "col-md-6",
+                            "col-12",
+                            "pe-xxl-3",
+                            "pe-md-2",
+                          ]}
+                        >
+                          <Box>
+                            <label className="font-size-md-4">Name</label>
+                            <input
+                              placeholder="Enter your name here"
+                              type="text"
+                              className="custom-input mt-3 font-size-sm-2"
+                            />
+                          </Box>
+                          <Box cssClasses={["mt-4"]}>
+                            <label className="font-size-md-4">
+                              What service you need?
+                            </label>
+                            <ReactSelect
+                              options={SERVICES}
+                              isMulti={true}
+                              closeMenuOnSelect={false}
+                              selectClassName="mt-3 font-size-sm-2"
+                              classNamePrefix="select"
+                              id="react-select"
+                              name="react-select"
+                              placeholder="Please select service from here"
+                              defaultOption=""
+                              handleChange={(event: { value: string }) =>
+                                setBudgetSelected(event.value)
+                              }
+                            />
+                          </Box>
+                          <Box cssClasses={["mt-4"]}>
+                            <label className="font-size-md-4">
+                              Contact Number
+                            </label>
+                            <input
+                              type="text"
+                              placeholder="Enter your mobile number here"
+                              className="custom-input mt-3 font-size-sm-2"
+                            />
+                          </Box>
                         </Box>
-                        <Box cssClasses={["mt-4"]}>
-                          <label className="font-size-md-4">Name</label>
-                          <input
-                            type="text"
-                            className="custom-input mt-3 font-size-sm-2"
-                          />
+                        <Box
+                          cssClasses={[
+                            "col-md-6",
+                            "col-12",
+                            "ps-xxl-3",
+                            "ps-md-2",
+                            "pt-4",
+                            "pt-md-0",
+                          ]}
+                        >
+                          <Box>
+                            <label className="font-size-md-4">Email</label>
+                            <input
+                              placeholder="Enter your email here"
+                              type="email"
+                              className="custom-input mt-3 font-size-sm-2"
+                            />
+                          </Box>
+                          <Box cssClasses={["mt-4"]}>
+                            <label className="font-size-md-4">
+                              Monthly Budget
+                            </label>
+                            <ReactSelect
+                              options={BUDGETS}
+                              selectClassName="mt-3 font-size-sm-2"
+                              classNamePrefix="select"
+                              id="react-select"
+                              name="react-select"
+                              placeholder="Please choose your budget"
+                              defaultOption=""
+                              handleChange={(event: { value: string }) =>
+                                setBudgetSelected(event.value)
+                              }
+                            />
+                          </Box>
+                          <Box cssClasses={["mt-4"]}>
+                            <label className="font-size-md-4">Website</label>
+                            <input
+                              type="text"
+                              placeholder="Type your website link here"
+                              className="custom-input mt-3 font-size-sm-2"
+                            />
+                          </Box>
                         </Box>
-                        <Box cssClasses={["mt-4"]}>
-                          <label className="font-size-md-4">
-                            Contact Number
-                          </label>
-                          <input
-                            type="text"
-                            placeholder="Enter your mobile number here"
-                            className="custom-input mt-3 font-size-sm-2"
-                          />
-                        </Box>
-                      </Box>
-                      <Box
-                        cssClasses={[
-                          "col-md-6",
-                          "col-12",
-                          "ps-xxl-3",
-                          "ps-md-2",
-                          "pt-4",
-                          "pt-md-0",
-                        ]}
-                      >
-                        <Box>
-                          <label className="font-size-md-4">Email</label>
-                          <input
-                            placeholder="Enter your email here"
-                            type="email"
-                            className="custom-input mt-3 font-size-sm-2"
-                          />
-                        </Box>
-                        <Box cssClasses={["mt-4"]}>
-                          <label className="font-size-md-4">Name</label>
-                          <input
-                            type="text"
-                            className="custom-input mt-3 font-size-sm-2"
-                          />
-                        </Box>
-                        <Box cssClasses={["mt-4"]}>
-                          <label className="font-size-md-4">Website</label>
-                          <input
-                            type="text"
-                            placeholder="Type your website link here"
-                            className="custom-input mt-3 font-size-sm-2"
-                          />
-                        </Box>
-                      </Box>
-                    </Flex>
-                    <Button
-                      text="Send"
-                      cssClasses={["d-flex", "mt-4", "m-auto"]}
-                    />
-                  </Box>
-                </div>
-              </Box>
-            </Flex>
+                      </Flex>
+                      <Button
+                        text="Send"
+                        cssClasses={["d-flex", "mt-4", "m-auto"]}
+                      />
+                    </Box>
+                  </div>
+                </Box>
+              </Flex>
+            </Box>
           </Box>
+        </div>
+      </div>
+      <div id="email" className="container position-relative">
+        <Box cssClasses={["contact-bg1"]}>
+          <Box cssClasses={["contact-bg1-overlay"]} />
+          <Image src={ContactBg1} width="100%" />
+        </Box>
+        <Box cssClasses={["email-section", "col-md-8", "m-auto"]}>
+          <p className="section-title2 text-center" data-aos="fade-up">
+            Get growth hacking tips!
+          </p>
+          <p
+            className="font-size-md-3 text-center mt-4 pb-2"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            If you are going to use a passage of Lorem Ipsum, you need to be
+            sure there isn't anything embarrassing hidden in the middle of text.
+            All the Lorem Ipsum generators.
+          </p>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <Flex
+              cssClasses={[
+                "col-md-6",
+                "mt-4",
+                "m-auto",
+                "border-r-10",
+                "email-form",
+                "p-1",
+              ]}
+              direction="row"
+              justifyContent="space-between"
+            >
+              <form className="d-flex w-100">
+                <input
+                  placeholder="Enter your email here"
+                  type="email"
+                  className="w-100 text-start border-0 font-size-sm-2 ps-2"
+                />
+                <Button text="Subscribe" cssClasses={["font-size-sm-2"]} />
+              </form>
+            </Flex>
+          </div>
         </Box>
       </div>
-    </div>
+    </>
   );
 };
 

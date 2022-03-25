@@ -23,7 +23,6 @@ input {
   border: 2.72px solid #7918f2;
   background: transparent;
   text-align: center;
-  color: white;
   font-size: 20px;
 }
 
@@ -62,6 +61,11 @@ input {
   border-radius: 5px;
   text-align: left;
   padding: 15px 10px;
+  background: rgba(255, 255, 255, 0.11);
+  color: white;
+}
+
+.input-bg {
   background: rgba(255, 255, 255, 0.11);
 }
 

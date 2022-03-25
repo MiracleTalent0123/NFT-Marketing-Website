@@ -152,6 +152,10 @@
   cursor: pointer;
 }
 
+#contact {
+  z-index: 10;
+}
+
 .contact-bg {
   position: absolute;
   top: 0;

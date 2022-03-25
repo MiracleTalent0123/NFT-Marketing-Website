@@ -3,21 +3,12 @@ import { Link as ScrollLink } from "react-scroll";
 import useNav from "../../hooks/useNav";
 import { Link } from "react-router-dom";
 import NavbarToggler from "./NavbatToggler";
-import Button from "../common/Button";
 import Logo from "../../assets/images/logo.png";
 import Flex from "../common/Flex";
 import Image from "../common/Image";
+import { HEADER_MENUS } from "../../constants";
 
 const Navbar = () => {
-  const navs = [
-    { menu: "Services", scrollLink: "services", link: "" },
-    { menu: "Clients", scrollLink: "", link: "" },
-    { menu: "Testimonials", scrollLink: "testimonials", link: "" },
-    { menu: "Blogs", scrollLink: "blogs", link: "/blogs" },
-    { menu: "Case Studies", scrollLink: "", link: "" },
-    { menu: "About Us", scrollLink: "", link: "/aboutus" },
-  ];
-
   const [navbarOpen] = useNav(false);
   const location = useLocation();
 
@@ -44,7 +35,7 @@ const Navbar = () => {
             id="navbarContent"
           >
             <ul className="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
-              {navs.map((nav, index) => (
+              {HEADER_MENUS.map((nav, index) => (
                 <li key={index} className="nav-item">
                   {location.pathname === "/" ? (
                     nav.scrollLink ? (
@@ -78,9 +69,6 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
-              <li>
-                <Button text="Become NFT & Crypto Influencer" />
-              </li>
             </ul>
           </div>
         </div>
