@@ -94,6 +94,10 @@ p {
   color: #ffd232 !important;
 }
 
+.white {
+  color: white !important;
+}
+
 .fw-700 {
   font-weight: 700;
 }

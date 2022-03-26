@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Flex from "../common/Flex";
 import Image from "../common/Image";
 import Box from "../common/Box";
@@ -7,8 +8,12 @@ import Bg7 from "../../assets/images/Ellipse_50.png";
 import ContactBg1 from "../../assets/images/contact_bg.png";
 import ReactSelect from "../common/Select";
 import { BUDGETS, SERVICES } from "../../constants";
+import Modal from "../common/Dialog";
+import Schedule from "./Schedule";
 
 const ContactForm = () => {
+  const [scheduleModal, setScheduleModal] = useState<boolean>(false);
+
   const setBudgetSelected = (value: string) => {
     console.log(value);
   };
@@ -140,10 +145,25 @@ const ContactForm = () => {
                           </Box>
                         </Box>
                       </Flex>
-                      <Button
-                        text="Send"
-                        cssClasses={["d-flex", "mt-4", "m-auto"]}
-                      />
+                      <Flex
+                        direction="row"
+                        alignItems="center"
+                        justifyContent="center"
+                        cssClasses={["mt-4"]}
+                      >
+                        <Button text="Send" cssClasses={["font-size-sm-1"]} />
+                        <Button
+                          outline
+                          text="Or Schedule a call"
+                          cssClasses={[
+                            "font-size-sm-1",
+                            "schedule-btn",
+                            "ms-xxl-4",
+                            "ms-3",
+                          ]}
+                          onClick={() => setScheduleModal(true)}
+                        />
+                      </Flex>
                     </Box>
                   </div>
                 </Box>
@@ -195,6 +215,12 @@ const ContactForm = () => {
           </div>
         </Box>
       </div>
+      <Modal
+        open={scheduleModal}
+        content={<Schedule />}
+        title="Let’s discuss about your project"
+        onClose={() => setScheduleModal(false)}
+      />
     </>
   );
 };

@@ -9,3 +9,13 @@
 @import "./select.css";
 @import "./pages/home.css";
 @import "./pages/about.css";
+
+.popup .MuiPaper-root {
+  background: transparent !important;
+}
+
+@media (max-width: 1559px) {
+  .popup .MuiPaper-root {
+    max-width: 1200px !important;
+  }
+}
