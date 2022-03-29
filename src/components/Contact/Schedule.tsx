@@ -13,7 +13,7 @@ const Schedule = () => {
           justifyContent="space-between"
           cssClasses={["mt-4", "bg-2", "schedule-section", "border-r-20"]}
         >
-          <div className="col-lg-5">
+          <div className="col-md-4">
             <span className="font-nulshock font-size-sm-1 gradient-text">
               Dentamarketing
             </span>
@@ -27,21 +27,15 @@ const Schedule = () => {
               cssClasses={["pt-xxl-4", "pt-2", "mt-2"]}
             >
               <Image src={ClockImg} width="40px" />
-              <span className="font-size-md-2 ms-3 mt-1 white">45 min</span>
+              <span className="font-size-md-2 ms-3 mt-1 white">20 min</span>
               <p className="font-size-md-3 opacity-color mt-xxl-4 mt-3">
                 If you are going to use a passage of Lorem Ipsum, you need to be
                 sure there isn't anything embarrassing hidden in the middle of
-                text. All the Lorem Ipsum generators on the Internet tend to
-                repeat predefined chunks as necessary, making this the first
-                true generator on the Internet.
-                <br />
-                <br /> If you are going to use a passage of Lorem Ipsum, you
-                need to be sure there isn't anything embarrassing hidden in the
-                middle of text. All the Lorem Ipsum generators.
+                text. All the Lorem Ipsum generators on the Internet.
               </p>
             </Flex>
           </div>
-          <div className="col-lg-6 mt-4 mt-lg-0 position-relative">
+          <div className="col-md-7 mt-4 mt-lg-0 position-relative">
             <Image src={Bg9} cssClasses={["background-12"]} />
             <Image src={Union} width="100%" height="100%" />
           </div>

@@ -3,7 +3,7 @@ interface ImageProps {
   width?: string;
   cssClasses?: string[];
   styles?: { [key: string]: string };
-  handleClick?: () => any;
+  handleClick?: () => void;
   src?: any;
 }
 
@@ -23,6 +23,7 @@ const Image = ({
         src={src}
         style={styles}
         className={cssClasses ? cssClasses.join(" ") : ""}
+        onClick={handleClick}
         alt=""
       />
     </>

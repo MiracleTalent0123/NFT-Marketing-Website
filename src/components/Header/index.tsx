@@ -19,7 +19,9 @@ const Navbar = () => {
           <Link to="/" className="navbar-brand pointer p-0">
             <Flex direction="row" justifyContent="start" alignItems="center">
               <Image src={Logo} cssClasses={["logo-img"]} />
-              <p className="ms-2">DetaMarketing</p>
+              <p className="ms-xxl-3 ms-2 gradient-text font-nulshock">
+                DetaMarketing
+              </p>
             </Flex>
           </Link>
           <button

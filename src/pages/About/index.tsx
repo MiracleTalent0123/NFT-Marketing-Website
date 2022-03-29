@@ -194,24 +194,24 @@ const AboutUs = () => {
               </div>
             </Box>
           </Flex>
-          <Flex
-            direction="row"
-            justifyContent="start"
-            alignItems="center"
-            cssClasses={["mt-4", "pt-4"]}
-          >
-            {about.map((about, index) => (
-              <About
-                key={index}
-                index={index}
-                icon={about.icon}
-                num={about.num}
-                desc={about.desc}
-                color={about.color}
-              />
-            ))}
-          </Flex>
         </Box>
+        <Flex
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          cssClasses={["mt-4", "pt-4"]}
+        >
+          {about.map((about, index) => (
+            <About
+              key={index}
+              index={index}
+              icon={about.icon}
+              num={about.num}
+              desc={about.desc}
+              color={about.color}
+            />
+          ))}
+        </Flex>
       </div>
       <div className="section">
         <Box cssClasses={["container"]}>

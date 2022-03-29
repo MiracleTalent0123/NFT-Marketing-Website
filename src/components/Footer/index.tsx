@@ -27,7 +27,7 @@ const Footer = () => {
             <Link to="/" className="navbar-brand pointer p-0">
               <Flex direction="row" justifyContent="start" alignItems="center">
                 <Image src={Logo} cssClasses={["footer-logo-img"]} />
-                <p className="ms-2 font-size-md-1" style={{ color: "white" }}>
+                <p className="ms-2 font-size-md-2 font-nulshock gradient-text">
                   DetaMarketing
                 </p>
               </Flex>

@@ -8,6 +8,7 @@ const About = ({
   col,
   color,
   index,
+  styles,
 }: {
   icon: any;
   num: number;
@@ -15,6 +16,7 @@ const About = ({
   col?: number;
   color: string;
   index: number;
+  styles?: { [key: string]: string };
 }) => {
   return (
     <Box cssClasses={[`col-sm-${col ? col : "auto"}`, "p-3", "col-12"]}>
@@ -28,7 +30,7 @@ const About = ({
             "bg-3",
             "w-100",
           ]}
-          styles={{ backgroundColor: "rgba(17, 24, 55, 0.5)" }}
+          styles={{ ...styles, backgroundColor: "rgba(17, 24, 55, 0.5)" }}
         >
           <Box
             cssClasses={[

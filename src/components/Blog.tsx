@@ -1,6 +1,7 @@
 import Box from "./common/Box";
 import Button from "./common/Button";
 import Image from "./common/Image";
+import PlayIcon from "../assets/images/play-circle.png";
 
 const Blog = ({
   img,
@@ -8,16 +9,18 @@ const Blog = ({
   desc,
   link,
   index,
+  cssClasses,
 }: {
   img: any;
   title: string;
   desc: string;
   link: string;
   index: number;
+  cssClasses?: string;
 }) => {
   return (
-    <Box cssClasses={["px-xxl-3", "p-2"]}>
-      <div data-aos="fade-up" data-aos-delay={index * 100}>
+    <Box cssClasses={["p-xxl-3", "p-2", cssClasses ? cssClasses : ""]}>
+      <div data-aos="fade-up">
         <Box
           cssClasses={[
             "p-xxl-4",
@@ -28,7 +31,13 @@ const Blog = ({
             "border-r-20",
           ]}
         >
-          <Image src={img} cssClasses={["border-r-10", "w-100"]} />
+          <Box
+            cssClasses={["position-relative", "border-r-10", "overflow-hidden"]}
+          >
+            <Image src={img} cssClasses={["w-100"]} />
+            <Box cssClasses={["blog-img-overlay"]} />
+            <Image src={PlayIcon} cssClasses={["blog-play-icon"]} />
+          </Box>
           <p className="font-size-md-1 fw-bold mt-4">{title}</p>
           <p className="font-size-sm-1 opacity-color">{desc}</p>
           <Button

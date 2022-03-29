@@ -91,11 +91,11 @@ const ContactForm = () => {
                           </Box>
                           <Box cssClasses={["mt-4"]}>
                             <label className="font-size-md-4">
-                              Contact Number
+                              Social Media Account
                             </label>
                             <input
                               type="text"
-                              placeholder="Enter your mobile number here"
+                              placeholder="Enter your social media link here"
                               className="custom-input mt-3 font-size-sm-2"
                             />
                           </Box>
@@ -151,7 +151,7 @@ const ContactForm = () => {
                         justifyContent="center"
                         cssClasses={["mt-4"]}
                       >
-                        <Button text="Send" cssClasses={["font-size-sm-1"]} />
+                        <Button text="Submit" cssClasses={["font-size-sm-1"]} />
                         <Button
                           outline
                           text="Or Schedule a call"

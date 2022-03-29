@@ -171,7 +171,7 @@ p {
 }
 
 .border-r-5 {
-  border-radius: 5px;
+  border-radius: 5px !important;
 }
 
 .border-gradient {
@@ -210,6 +210,11 @@ p {
   mask-composite: exclude;
 }
 
+.hero-img-overlay {
+  background: rgba(13, 18, 50, 0.74);
+  backdrop-filter: blur(12px);
+}
+
 @media (min-width: 1560px) {
   .border-gradient-1::before {
     border-radius: 10px;
@@ -228,7 +233,7 @@ p {
   }
 
   .border-r-5 {
-    border-radius: 5px;
+    border-radius: 5px !important;
   }
 
   .font-size-bg {
