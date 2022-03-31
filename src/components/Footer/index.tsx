@@ -9,6 +9,7 @@ import Telegram from "../../assets/images/Telegram.png";
 import Button from "../common/Button";
 import Logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
+import SocialIcon from "../common/SocialIcon";
 
 const Footer = () => {
   const socialIcons = [
@@ -38,11 +39,8 @@ const Footer = () => {
             </p>
             <Flex direction="row" justifyContent="start" cssClasses={["mt-3"]}>
               {socialIcons.map((icon, index) => (
-                <Box
-                  key={index}
-                  cssClasses={["social-icon", "me-xxl-4", "me-3"]}
-                >
-                  <Image src={icon.icon} />
+                <Box key={index} cssClasses={["me-xxl-4", "me-3"]}>
+                  <SocialIcon icon={icon.icon} />
                 </Box>
               ))}
             </Flex>

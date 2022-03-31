@@ -36,10 +36,8 @@ const ContactForm = () => {
             <Box cssClasses={["px-md-4", "py-4"]}>
               <Flex direction={"row"} justifyContent="center">
                 <Box cssClasses={["col-lg-7", "col-11"]}>
-                  <p className="section-title2 text-center" data-aos="fade-up">
-                    Contact Us
-                  </p>
-                  <div data-aos="fade-up" data-aos-delay="200">
+                  <p className="section-title2 text-center">Contact Us</p>
+                  <div>
                     <Box
                       cssClasses={[
                         "border-gradient contact-form",
@@ -178,19 +176,16 @@ const ContactForm = () => {
           <Image src={ContactBg1} width="100%" />
         </Box>
         <Box cssClasses={["email-section", "col-md-8", "m-auto"]}>
-          <p className="section-title2 text-center" data-aos="fade-up">
-            Get growth hacking tips!
-          </p>
+          <p className="section-title2 text-center">Get growth hacking tips!</p>
           <p
             className="font-size-md-3 text-center mt-4 pb-2"
-            data-aos="fade-up"
             data-aos-delay="100"
           >
             If you are going to use a passage of Lorem Ipsum, you need to be
             sure there isn't anything embarrassing hidden in the middle of text.
             All the Lorem Ipsum generators.
           </p>
-          <div data-aos="fade-up" data-aos-delay="200">
+          <div>
             <Flex
               cssClasses={[
                 "col-md-6",

@@ -17,7 +17,7 @@
 }
 
 .section-1 {
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
 .tab {
@@ -104,14 +104,6 @@
   bottom: 5px;
   right: 10px;
   width: 20px;
-}
-
-.blog:hover button {
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: unset;
-  background-clip: unset;
-  color: white;
-  border-radius: 8px;
 }
 
 .client {

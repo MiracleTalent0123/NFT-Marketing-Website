@@ -2,6 +2,7 @@ import Box from "./common/Box";
 import Button from "./common/Button";
 import Image from "./common/Image";
 import PlayIcon from "../assets/images/play-circle.png";
+import { Link } from "react-router-dom";
 
 const Blog = ({
   img,
@@ -40,11 +41,13 @@ const Blog = ({
           </Box>
           <p className="font-size-md-1 fw-bold mt-4">{title}</p>
           <p className="font-size-sm-1 opacity-color">{desc}</p>
-          <Button
-            text="Read More"
-            cssClasses={["mt-4", "font-size-sm-2"]}
-            outline
-          />
+          <Link to="/blog">
+            <Button
+              text="Read More"
+              cssClasses={["mt-4", "font-size-sm-2"]}
+              outline
+            />
+          </Link>
         </Box>
       </div>
     </Box>
