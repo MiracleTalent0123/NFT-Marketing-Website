@@ -12,6 +12,7 @@
 @import "./pages/home.css";
 @import "./pages/about.css";
 @import "./pages/blog.css";
+@import "./pages/services.css";
 
 .popup .MuiPaper-root {
   background: transparent !important;

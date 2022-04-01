@@ -7,6 +7,7 @@ interface FlexProps {
   styles?: { [key: string]: string };
   cssClasses?: string[];
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
 const Flex = ({
@@ -16,6 +17,7 @@ const Flex = ({
   styles,
   cssClasses,
   children,
+  onClick,
 }: FlexProps) => {
   return (
     <div
@@ -28,6 +30,7 @@ const Flex = ({
         alignItems: alignItems,
         flexWrap: "wrap",
       }}
+      onClick={onClick}
     >
       {children}
     </div>

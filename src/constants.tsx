@@ -10,14 +10,14 @@ export interface IBlog {
 }
 
 export const SERVICES = [
-  { label: "Twitter", value: "Twitter" },
-  { label: "Instagram", value: "Instagram" },
-  { label: "YouTube", value: "YouTube" },
-  { label: "Tiktok", value: "Tiktok" },
+  { label: "Tiktok", value: "tiktok" },
+  { label: "Instagram", value: "instagram" },
+  { label: "YouTube", value: "youtube" },
+  { label: "Twitter", value: "twitter" },
 ];
 
 export const HEADER_MENUS = [
-  { menu: "Services", scrollLink: "services", link: "" },
+  { menu: "Services", scrollLink: "", link: "/services" },
   { menu: "Clients", scrollLink: "", link: "" },
   { menu: "Testimonials", scrollLink: "testimonials", link: "" },
   { menu: "Blogs", scrollLink: "blogs", link: "/blogs" },

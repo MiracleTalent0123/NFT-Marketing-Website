@@ -53,7 +53,8 @@
 
 .service:hover:before,
 .blog:hover:before,
-.testimonial:hover:before {
+.testimonial:hover:before,
+.pricing-table:hover:before {
   background: linear-gradient(
     256.08deg,
     #29ce81 -70.01%,
