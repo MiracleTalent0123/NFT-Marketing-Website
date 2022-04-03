@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import Flex from "../../components/common/Flex";
 import Box from "../../components/common/Box";
 import Image from "../../components/common/Image";
@@ -245,20 +246,21 @@ const Home = () => {
         <div id="home" className="home-section text-center container">
           <Box cssClasses={["col-xl-8", "col-lg-10", "m-auto"]}>
             <p className="text-shadow font-size-bg mt-4" data-aos="zoom-in">
-              We help crypto & NFT brands go viral
+              We help Crypto & NFT projects to go viral.
             </p>
             <p
               className="font-size-md-1 mt-4"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour
+              Grow your project with top talent content creators and celebrities
+              all around the world.
             </p>
           </Box>
           <div data-aos="fade-up" data-aos-delay="400">
-            <Button cssClasses={["mt-4"]} text="Let’s Talk" />
+            <ScrollLink to={"contact"} spy={true}>
+              <Button cssClasses={["mt-4"]} text="Let’s Talk" />
+            </ScrollLink>
           </div>
           <Flex direction="row" justifyContent="center">
             <Box cssClasses={["col-md-10", "mt-3", "col-12"]}>

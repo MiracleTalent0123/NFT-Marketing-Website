@@ -18,9 +18,9 @@ export const SERVICES = [
 
 export const HEADER_MENUS = [
   { menu: "Services", scrollLink: "", link: "/services" },
-  { menu: "Clients", scrollLink: "", link: "" },
+  { menu: "Clients", scrollLink: "customers", link: "" },
   { menu: "Testimonials", scrollLink: "testimonials", link: "" },
-  { menu: "Blogs", scrollLink: "blogs", link: "/blogs" },
+  { menu: "Blogs", scrollLink: "", link: "/blogs" },
   { menu: "About Us", scrollLink: "", link: "/aboutus" },
   { menu: "Become NFT & Crypto Influencer", scrollLink: "", link: "" },
 ];
