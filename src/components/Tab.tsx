@@ -7,9 +7,9 @@ const Tab = ({
   setActiveTab,
 }: {
   tab: string;
-  id: number;
-  activeTab: number;
-  setActiveTab: (id: number) => void;
+  id: string;
+  activeTab: string;
+  setActiveTab: (id: string) => void;
 }) => {
   return (
     <div onClick={() => setActiveTab(id)}>
@@ -24,6 +24,7 @@ const Tab = ({
           "mx-3",
           `${id === activeTab ? "active" : ""}`,
         ]}
+        styles={{ position: "relative", zIndex: "10" }}
       >
         {tab}
       </Box>

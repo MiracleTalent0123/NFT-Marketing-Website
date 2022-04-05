@@ -132,6 +132,19 @@
   bottom: -45%;
 }
 
+.service-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+
+.service-desc {
+  position: relative;
+  z-index: 10;
+}
+
 @media (min-width: 1560px) {
   .service-tab-icon {
     width: 48px;

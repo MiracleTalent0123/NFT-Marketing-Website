@@ -27,6 +27,7 @@ ReactDOM.render(
           <Route path="/blogs" component={Blogs} />
           <Route path="/blog" component={Blog} />
           <Route path="/aboutus" component={AboutUs} />
+          <Route path="/services/:service" component={Services} />
           <Route path="/services" component={Services} />
           <Route path="/" component={Home} />
         </Switch>

@@ -78,6 +78,10 @@ input {
   color: white;
 }
 
+.btn-outlint-lg {
+  padding: 15px 35px;
+}
+
 @media (min-width: 1560px) {
   .custom-btn,
   .schedule-btn {
@@ -96,5 +100,9 @@ input {
 
   .custom-input {
     padding: 20px 15px;
+  }
+
+  .btn-outlint-lg {
+    padding: 20px 50px;
   }
 }

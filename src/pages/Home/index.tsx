@@ -14,7 +14,7 @@ import ServiceIcon1 from "../../assets/images/bitcoin-(btc).png";
 import ServiceIcon2 from "../../assets/images/binance-coin-(bnb).png";
 import ServiceIcon3 from "../../assets/images/theta-(theta).png";
 import ServiceIcon4 from "../../assets/images/nebulas-(nas).png";
-import Service from "../../components/Service";
+import Seller from "../../components/Service";
 import Client1 from "../../assets/images/Client-Logos_beckman-coulter.png";
 import Client2 from "../../assets/images/Client-Logos_John-Hancock.png";
 import Client3 from "../../assets/images/Client-Logos_NXP.png";
@@ -30,10 +30,16 @@ import Bg3 from "../../assets/images/bg3.png";
 import Bg4 from "../../assets/images/Ellipse_47.png";
 import Bg5 from "../../assets/images/Ellipse_49.png";
 import Bg6 from "../../assets/images/Ellipse_48.png";
+import Bg7 from "../../assets/images/Ellipse_53.png";
 import Bg from "../../assets/images/bg.png";
 import Avatar from "../../assets/images/avatar.png";
 import AvatarLogo from "../../assets/images/t_logo.png";
 import Testimonial from "../../components/Testimonial";
+import Service, { ServiceProps } from "../../components/common/Service";
+import Crown from "../../assets/images/services/crown.png";
+import Ranking from "../../assets/images/services/ranking.png";
+import ProfileUser from "../../assets/images/services/profile-2user.png";
+import Timer from "../../assets/images/services/timer.png";
 
 const Home = () => {
   const about = [
@@ -63,14 +69,14 @@ const Home = () => {
   ];
 
   const serviceTabs = [
-    { id: 1, tab: "Best Sellers" },
-    { id: 2, tab: "Twitter" },
-    { id: 3, tab: "Instagram" },
-    { id: 4, tab: "YouTube" },
-    { id: 5, tab: "Tiktok" },
+    { id: "sellers", tab: "Best Sellers" },
+    { id: "tiktok", tab: "Tiktok" },
+    { id: "twitter", tab: "Twitter" },
+    { id: "instagram", tab: "Instagram" },
+    { id: "youtube", tab: "YouTube" },
   ];
 
-  const services = [
+  const sellers = [
     {
       icon: ServiceIcon1,
       title: "Bitcoin Promotion",
@@ -238,7 +244,14 @@ const Home = () => {
     },
   ];
 
-  const [activeTab, setActiveTab] = useState<number>(1);
+  const services: ServiceProps[] = [
+    { icon: Crown, title: "#1", desc: "Most downloaded app" },
+    { icon: Ranking, title: "2.5B+", desc: "TikTok installs worldwide" },
+    { icon: ProfileUser, title: "80M+", desc: "Monthly users in USA" },
+    { icon: Timer, title: "52", desc: "Mins avg watched user/day" },
+  ];
+
+  const [activeTab, setActiveTab] = useState<string>("sellers");
 
   return (
     <>
@@ -358,26 +371,196 @@ const Home = () => {
               ))}
             </Flex>
           </div>
-          <div className="position-relative">
-            <Image src={Bg} cssClasses={["background-6"]} />
-            <Image src={Bg4} cssClasses={["background-7"]} />
-            <Flex
-              cssClasses={["mt-4", "pt-2", "position-relative", "container"]}
-              direction={"row"}
-              justifyContent="space-between"
-              alignItems="center"
-            >
-              {services.map((service, index) => (
-                <Service
-                  key={index}
-                  icon={service.icon}
-                  title={service.title}
-                  desc={service.desc}
-                  index={index}
-                />
-              ))}
-            </Flex>
-          </div>
+          {activeTab === "sellers" && (
+            <div className="position-relative">
+              <Image src={Bg} cssClasses={["background-6"]} />
+              <Image src={Bg4} cssClasses={["background-7"]} />
+              <Flex
+                cssClasses={["mt-4", "pt-2", "position-relative", "container"]}
+                direction={"row"}
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                {sellers.map((service, index) => (
+                  <Seller
+                    key={index}
+                    icon={service.icon}
+                    title={service.title}
+                    desc={service.desc}
+                    index={index}
+                  />
+                ))}
+              </Flex>
+            </div>
+          )}
+          {activeTab !== "sellers" && (
+            <div className="container mt-4 pt-4" data-aos="fade-up">
+              {activeTab === "tiktok" && (
+                <Flex
+                  cssClasses={[
+                    "bg-gradient-1",
+                    "p-4",
+                    "border-0",
+                    "border-r-20",
+                    "position-relative",
+                  ]}
+                  direction="column"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Image src={Bg7} cssClasses={["service-bg"]} />
+                  <div className="col-md-8 text-center py-4 service-desc">
+                    <p className="font-size-lg-2 fw-700">
+                      Why TikTok Is A Great Marketing Channel
+                    </p>
+                    <p className="opacity-color font-size-md-3 mt-3">
+                      If you are going to use a passage of Lorem Ipsum, you need
+                      to be sure there isn't anything embarrassing hidden in the
+                      middle of text. All the Lorem Ipsum generators on the
+                      Internet
+                    </p>
+                  </div>
+                  <Flex
+                    direction={"row"}
+                    justifyContent="center"
+                    alignItems="center"
+                    cssClasses={["col-md-10", "mt-xxl-3"]}
+                  >
+                    {services.map((service, index) => (
+                      <Service key={index} service={service} />
+                    ))}
+                  </Flex>
+                </Flex>
+              )}
+              {activeTab === "twitter" && (
+                <Flex
+                  cssClasses={[
+                    "bg-gradient-1",
+                    "p-4",
+                    "border-0",
+                    "border-r-20",
+                    "position-relative",
+                  ]}
+                  direction="column"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Image src={Bg7} cssClasses={["service-bg"]} />
+                  <div className="col-md-8 text-center py-4 service-desc">
+                    <p className="font-size-lg-2 fw-700">
+                      Why Twitter Is A Great Marketing Channel
+                    </p>
+                    <p className="opacity-color font-size-md-3 mt-3">
+                      If you are going to use a passage of Lorem Ipsum, you need
+                      to be sure there isn't anything embarrassing hidden in the
+                      middle of text. All the Lorem Ipsum generators on the
+                      Internet
+                    </p>
+                  </div>
+                  <Flex
+                    direction={"row"}
+                    justifyContent="center"
+                    alignItems="center"
+                    cssClasses={["col-md-10", "mt-xxl-3"]}
+                  >
+                    {services.map((service, index) => (
+                      <Service key={index} service={service} />
+                    ))}
+                  </Flex>
+                </Flex>
+              )}
+              {activeTab === "instagram" && (
+                <Flex
+                  cssClasses={[
+                    "bg-gradient-1",
+                    "p-4",
+                    "border-0",
+                    "border-r-20",
+                    "position-relative",
+                  ]}
+                  direction="column"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Image src={Bg7} cssClasses={["service-bg"]} />
+                  <div className="col-md-8 text-center py-4 service-desc">
+                    <p className="font-size-lg-2 fw-700">
+                      Why Instagram Is A Great Marketing Channel
+                    </p>
+                    <p className="opacity-color font-size-md-3 mt-3">
+                      If you are going to use a passage of Lorem Ipsum, you need
+                      to be sure there isn't anything embarrassing hidden in the
+                      middle of text. All the Lorem Ipsum generators on the
+                      Internet
+                    </p>
+                  </div>
+                  <Flex
+                    direction={"row"}
+                    justifyContent="center"
+                    alignItems="center"
+                    cssClasses={["col-md-10", "mt-xxl-3"]}
+                  >
+                    {services.map((service, index) => (
+                      <Service key={index} service={service} />
+                    ))}
+                  </Flex>
+                </Flex>
+              )}
+              {activeTab === "youtube" && (
+                <Flex
+                  cssClasses={[
+                    "bg-gradient-1",
+                    "p-4",
+                    "border-0",
+                    "border-r-20",
+                    "position-relative",
+                  ]}
+                  direction="column"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Image src={Bg7} cssClasses={["service-bg"]} />
+                  <div className="col-md-8 text-center py-4 service-desc">
+                    <p className="font-size-lg-2 fw-700">
+                      Why YouTube Is A Great Marketing Channel
+                    </p>
+                    <p className="opacity-color font-size-md-3 mt-3">
+                      If you are going to use a passage of Lorem Ipsum, you need
+                      to be sure there isn't anything embarrassing hidden in the
+                      middle of text. All the Lorem Ipsum generators on the
+                      Internet
+                    </p>
+                  </div>
+                  <Flex
+                    direction={"row"}
+                    justifyContent="center"
+                    alignItems="center"
+                    cssClasses={["col-md-10", "mt-xxl-3"]}
+                  >
+                    {services.map((service, index) => (
+                      <Service key={index} service={service} />
+                    ))}
+                  </Flex>
+                </Flex>
+              )}
+              <Box
+                cssClasses={[
+                  "mt-4",
+                  "d-flex",
+                  "pt-xxl-2",
+                  "justify-content-center",
+                ]}
+              >
+                <Link to={`/services/${activeTab}`}>
+                  <Button
+                    cssClasses={["font-size-sm-1", "btn-outlint-lg"]}
+                    outline
+                    text="Learn More"
+                  />
+                </Link>
+              </Box>
+            </div>
+          )}
         </div>
         <div id="customers" className="section container">
           <Box
@@ -520,8 +703,13 @@ const Home = () => {
                 <Button
                   text="Read all blogs"
                   outline
-                  cssClasses={["mt-4", "m-auto", "d-flex", "font-size-sm-1"]}
-                  styles={{ padding: "20px 50px" }}
+                  cssClasses={[
+                    "mt-4",
+                    "m-auto",
+                    "d-flex",
+                    "font-size-sm-1",
+                    "btn-outlint-lg",
+                  ]}
                 />
               </Link>
             </Box>
