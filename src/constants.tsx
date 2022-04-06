@@ -18,32 +18,32 @@ export interface IBlog {
 export const ABOUT = [
   {
     icon: AudienceIcon,
-    num: "5M",
+    num: "5M+",
     desc: "Targeted Audience",
     col: 4,
     color: "green",
   },
   {
     icon: ExperienceIcon,
-    num: 10,
+    num: "10+",
     desc: "Years of Experience",
     col: 4,
     color: "orange",
   },
-  { icon: TeamIcon, num: 15, desc: "Team Experts", col: 4, color: "pink" },
+  { icon: TeamIcon, num: "15+", desc: "Team Experts", col: 4, color: "pink" },
   {
     icon: CustomerIcon,
-    num: 30,
+    num: "7/24",
     desc: "Post Purchase Customer Service and Consultancy",
     col: 6,
     color: "yellow",
   },
   {
     icon: StrategeIcon,
-    num: 30,
+    num: "%900+",
     desc: "Best ROI Marketing Strategies",
     col: 6,
-    color: "yellow",
+    color: "green",
   },
 ];
 

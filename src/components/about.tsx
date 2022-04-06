@@ -56,7 +56,7 @@ const About = ({
             <Image src={icon} width="30px" />
           </Box>
           <Box cssClasses={["mt-xxl-3", "mt-2"]}>
-            <p className={`font-size-lg-2 fw-700 ${color}`}>{num}+</p>
+            <p className={`font-size-lg-2 fw-700 ${color}`}>{num}</p>
           </Box>
           <p className="font-size-md-2">{desc}</p>
         </Box>
