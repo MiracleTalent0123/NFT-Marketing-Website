@@ -88,8 +88,10 @@ const BlogDetail = () => {
           <Image src={BlogHeader} width="100%" />
           <Box cssClasses={["blog-header"]}>
             <Box cssClasses={["blog-header-title"]}>
-              <p className="font-size-lg-2">Strategy about social media</p>
-              <p className="font-size-sm-1 opacity-color mt-2 fw-700">
+              <p className="font-size-lg-2 fw-700">
+                Strategy about social media
+              </p>
+              <p className="font-size-sm-1 opacity-color mt-2">
                 If you are going to use a passage of Lorem Ipsum, you need to be
                 sure there isn't anything embarrassing hidden in the middle of
                 text. All the Lorem Ipsum generators on the.

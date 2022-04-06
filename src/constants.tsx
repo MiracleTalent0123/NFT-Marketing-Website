@@ -2,12 +2,50 @@ import BlogImg1 from "./assets/images/blogs/blog1.png";
 import BlogImg2 from "./assets/images/blogs/blog2.png";
 import BlogImg3 from "./assets/images/blogs/blog3.png";
 
+import ExperienceIcon from "./assets/images/icons/experience.png";
+import AudienceIcon from "./assets/images/icons/audience.png";
+import TeamIcon from "./assets/images/icons/people.png";
+import CustomerIcon from "./assets/images/icons/customer.png";
+import StrategeIcon from "./assets/images/icons/stratege.png";
+
 export interface IBlog {
   image: any;
   title: string;
   desc: string;
   link: string;
 }
+
+export const ABOUT = [
+  {
+    icon: AudienceIcon,
+    num: "5M",
+    desc: "Targeted Audience",
+    col: 4,
+    color: "green",
+  },
+  {
+    icon: ExperienceIcon,
+    num: 10,
+    desc: "Years of Experience",
+    col: 4,
+    color: "orange",
+  },
+  { icon: TeamIcon, num: 15, desc: "Team Experts", col: 4, color: "pink" },
+  {
+    icon: CustomerIcon,
+    num: 30,
+    desc: "Post Purchase Customer Service and Consultancy",
+    col: 6,
+    color: "yellow",
+  },
+  {
+    icon: StrategeIcon,
+    num: 30,
+    desc: "Best ROI Marketing Strategies",
+    col: 6,
+    color: "yellow",
+  },
+];
 
 export const SERVICES = [
   { label: "Tiktok", value: "tiktok" },

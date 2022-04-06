@@ -96,7 +96,7 @@ const Services = () => {
     {
       icon: Standard,
       title: "Standard",
-      price: "1500",
+      price: "Micro Influencers",
       desc: [
         "If you are going to use",
         "If you are going to use",
@@ -109,7 +109,7 @@ const Services = () => {
     {
       icon: Business,
       title: "Business",
-      price: "3500",
+      price: "Macro Influencers",
       desc: [
         "If you are going to use",
         "If you are going to use",
@@ -122,7 +122,7 @@ const Services = () => {
     {
       icon: Premium,
       title: "Premium",
-      price: "1500",
+      price: "Mega Influencers",
       desc: [
         "If you are going to use",
         "If you are going to use",
@@ -184,7 +184,7 @@ const Services = () => {
               ]}
             >
               {SERVICES.map((service, index) => (
-                <Link to={`/services/${service.value}`}>
+                <Link to={`/services/${service.value}`} key={index}>
                   <ServiceTab
                     key={index}
                     activeClass="active"

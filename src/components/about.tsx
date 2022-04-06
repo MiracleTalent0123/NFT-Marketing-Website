@@ -9,18 +9,28 @@ const About = ({
   color,
   index,
   styles,
+  className,
 }: {
   icon: any;
-  num: number;
+  num: number | string;
   desc: string;
   col?: number;
   color: string;
   index: number;
   styles?: { [key: string]: string };
+  className?: string;
 }) => {
   return (
-    <Box cssClasses={[`col-sm-${col ? col : "auto"}`, "p-3", "col-12"]}>
-      <div data-aos="flip-up" data-aos-delay={index * 100}>
+    <Box
+      cssClasses={[
+        `col-md-${col ? col : "auto"}`,
+        "p-xxl-3",
+        "p-2",
+        "col-12",
+        className ? className : "",
+      ]}
+    >
+      <div data-aos="flip-up" data-aos-delay={index * 100} className="h-100">
         <Box
           cssClasses={[
             "border-gradient",
@@ -29,6 +39,7 @@ const About = ({
             "p-3",
             "bg-3",
             "w-100",
+            "h-100",
           ]}
           styles={{ ...styles, backgroundColor: "rgba(17, 24, 55, 0.5)" }}
         >
@@ -44,7 +55,7 @@ const About = ({
           >
             <Image src={icon} width="30px" />
           </Box>
-          <Box>
+          <Box cssClasses={["mt-xxl-3", "mt-2"]}>
             <p className={`font-size-lg-2 fw-700 ${color}`}>{num}+</p>
           </Box>
           <p className="font-size-md-2">{desc}</p>

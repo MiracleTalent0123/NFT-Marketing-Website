@@ -3,8 +3,6 @@ import Image from "../../components/common/Image";
 import Box from "../../components/common/Box";
 import HeroImg from "../../assets/images/about/hero.png";
 import AboutImg from "../../assets/images/about/about.png";
-import PeopleIcon from "../../assets/images/people.png";
-import SearchStatusIcon from "../../assets/images/search-status.png";
 import About from "../../components/about";
 import ServiceIcon1 from "../../assets/images/maximize.png";
 import ServiceIcon2 from "../../assets/images/theta-(theta).png";
@@ -21,30 +19,9 @@ import Bg from "../../assets/images/bg.png";
 import Bg4 from "../../assets/images/Ellipse_47.png";
 import Bg1 from "../../assets/images/about/Ellipse.png";
 
-const AboutUs = () => {
-  const about = [
-    { icon: PeopleIcon, num: 250, desc: "Clients", color: "green" },
-    { icon: PeopleIcon, num: 15, desc: "Team Experts", color: "pink" },
-    {
-      icon: SearchStatusIcon,
-      num: 10,
-      desc: "Years of experience",
-      color: "orange",
-    },
-    {
-      icon: PeopleIcon,
-      num: 30,
-      desc: "Marketing Services",
-      color: "yellow",
-    },
-    {
-      icon: PeopleIcon,
-      num: 30,
-      desc: "Marketing Services",
-      color: "yellow",
-    },
-  ];
+import { ABOUT } from "../../constants";
 
+const AboutUs = () => {
   const services = [
     {
       icon: ServiceIcon1,
@@ -172,17 +149,18 @@ const AboutUs = () => {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                If you are going to use a passage of Lorem Ipsum, you need to be
-                sure there isn't anything embarrassing hidden in the middle of
-                text. All the Lorem Ipsum generators on the Internet tend to
-                repeat predefined chunks as necessary, making this the first
-                true generator on the Internet.
+                Our vision is to lay down the groundwork to create the framework
+                for creators, artists, visionaries and etc. to safely promote
+                their brands, products, and collections. With this vision, we
+                have started the work to build a trustworthy marketing agency
+                and grew up to be one in 10 years of hard work.
                 <br />
-                <br /> If you are going to use a passage of Lorem Ipsum, you
-                need to be sure there isn't anything embarrassing hidden in the
-                middle of text. All the Lorem Ipsum generators on the Internet
-                tend to repeat predefined chunks as necessary, making this the
-                first true generator on the Internet.
+                <br />
+                Specifically vetted team experts, growth analysts, and targeted
+                marketing specialists have been gathered together to form our
+                team since its foundation. Throughout the years our clients have
+                been never left dissatisfied, and the experience further made us
+                veterans in the field.
               </p>
             </Box>
             <Box cssClasses={["col-lg-1"]} />
@@ -198,10 +176,9 @@ const AboutUs = () => {
         <Flex
           direction="row"
           justifyContent="center"
-          alignItems="center"
           cssClasses={["mt-4", "pt-4"]}
         >
-          {about.map((about, index) => (
+          {ABOUT.map((about, index) => (
             <About
               key={index}
               index={index}
@@ -209,6 +186,7 @@ const AboutUs = () => {
               num={about.num}
               desc={about.desc}
               color={about.color}
+              className="about-width"
             />
           ))}
         </Flex>

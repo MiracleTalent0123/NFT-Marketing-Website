@@ -5,8 +5,6 @@ import Box from "../../components/common/Box";
 import Image from "../../components/common/Image";
 import Button from "../../components/common/Button";
 import HeroImage from "../../assets/images/hero_img.png";
-import PeopleIcon from "../../assets/images/people.png";
-import SearchStatusIcon from "../../assets/images/search-status.png";
 import About from "../../components/about";
 import { useState } from "react";
 import Tab from "../../components/Tab";
@@ -41,33 +39,9 @@ import Ranking from "../../assets/images/services/ranking.png";
 import ProfileUser from "../../assets/images/services/profile-2user.png";
 import Timer from "../../assets/images/services/timer.png";
 
-const Home = () => {
-  const about = [
-    { icon: PeopleIcon, num: 250, desc: "Clients", col: 4, color: "green" },
-    {
-      icon: SearchStatusIcon,
-      num: 10,
-      desc: "Years of experience",
-      col: 4,
-      color: "orange",
-    },
-    { icon: PeopleIcon, num: 15, desc: "Team Experts", col: 4, color: "pink" },
-    {
-      icon: PeopleIcon,
-      num: 30,
-      desc: "Marketing Services",
-      col: 6,
-      color: "yellow",
-    },
-    {
-      icon: PeopleIcon,
-      num: 30,
-      desc: "Marketing Services",
-      col: 6,
-      color: "yellow",
-    },
-  ];
+import { ABOUT } from "../../constants";
 
+const Home = () => {
   const serviceTabs = [
     { id: "sellers", tab: "Best Sellers" },
     { id: "tiktok", tab: "Tiktok" },
@@ -77,26 +51,6 @@ const Home = () => {
   ];
 
   const sellers = [
-    {
-      icon: ServiceIcon1,
-      title: "Bitcoin Promotion",
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.",
-    },
-    {
-      icon: ServiceIcon2,
-      title: "Service 2",
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.",
-    },
-    {
-      icon: ServiceIcon3,
-      title: "Service 3",
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.",
-    },
-    {
-      icon: ServiceIcon4,
-      title: "Service 4",
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.",
-    },
     {
       icon: ServiceIcon1,
       title: "Bitcoin Promotion",
@@ -257,7 +211,7 @@ const Home = () => {
     <>
       <Box cssClasses={["home-content"]}>
         <div id="home" className="home-section text-center container">
-          <Box cssClasses={["col-xl-8", "col-lg-10", "m-auto"]}>
+          <Box cssClasses={["col-xl-9", "col-lg-10", "m-auto"]}>
             <p className="text-shadow font-size-bg mt-4" data-aos="zoom-in">
               We help Crypto & NFT projects to go viral.
             </p>
@@ -300,17 +254,19 @@ const Home = () => {
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  If you are going to use a passage of Lorem Ipsum, you need to
-                  be sure there isn't anything embarrassing hidden in the middle
-                  of text. All the Lorem Ipsum generators on the Internet tend
-                  to repeat predefined chunks as necessary, making this the
-                  first true generator on the Internet.
+                  Our vision is to lay down the groundwork to create the
+                  framework for creators, artists, visionaries and etc. to
+                  safely promote their brands, products, and collections. With
+                  this vision, we have started the work to build a trustworthy
+                  marketing agency and grew up to be one in 10 years of hard
+                  work.
                   <br />
-                  <br /> If you are going to use a passage of Lorem Ipsum, you
-                  need to be sure there isn't anything embarrassing hidden in
-                  the middle of text. All the Lorem Ipsum generators on the
-                  Internet tend to repeat predefined chunks as necessary, making
-                  this the first true generator on the Internet.
+                  <br />
+                  Specifically vetted team experts, growth analysts, and
+                  targeted marketing specialists have been gathered together to
+                  form our team since its foundation. Throughout the years our
+                  clients have been never left dissatisfied, and the experience
+                  further made us veterans in the field.
                 </p>
               </Box>
               <Box cssClasses={["col-lg-1"]} />
@@ -329,7 +285,7 @@ const Home = () => {
                   alignItems="flex-end"
                   styles={{ margin: "0 -12px" }}
                 >
-                  {about.map((about, index) => (
+                  {ABOUT.map((about, index) => (
                     <About
                       key={index}
                       index={index}

@@ -1,3 +1,4 @@
+import { Link as ScrollLink } from "react-scroll";
 import Box from "./common/Box";
 import Flex from "./common/Flex";
 import Image from "./common/Image";
@@ -40,7 +41,7 @@ const Pricing: React.FC<Props> = ({ pricing }) => {
           </Box>
         </Flex>
         <Box cssClasses={["pricing-table-body", "mt-4"]}>
-          <p className="font-size-lg-3 fw-700">${pricing.price}/month</p>
+          <p className="font-size-lg-3 fw-700">{pricing.price}</p>
           <ul className="mt-xxl-3 d-inline-block p-0 mt-2">
             {pricing.desc.map((desc, index) => (
               <li key={index} className="opacity-color font-size-sm-1 py-2">
@@ -50,18 +51,20 @@ const Pricing: React.FC<Props> = ({ pricing }) => {
           </ul>
         </Box>
         <Flex direction="row" justifyContent="center">
-          <Box
-            cssClasses={[
-              "pricing-table-learnmore",
-              "opacity-color",
-              "mt-xxl-4",
-              "mt-2",
-              "font-size-sm-1",
-              "fw-700",
-            ]}
-          >
-            Learn More
-          </Box>
+          <ScrollLink to={"contact"} spy={true}>
+            <Box
+              cssClasses={[
+                "pricing-table-learnmore",
+                "opacity-color",
+                "mt-xxl-4",
+                "mt-2",
+                "font-size-sm-1",
+                "fw-700",
+              ]}
+            >
+              Learn More
+            </Box>
+          </ScrollLink>
         </Flex>
       </Box>
     </Box>

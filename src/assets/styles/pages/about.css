@@ -48,3 +48,9 @@
     width: 40px;
   }
 }
+
+@media (min-width: 768px) {
+  .about-width {
+    width: 20% !important;
+  }
+}
