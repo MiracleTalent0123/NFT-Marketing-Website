@@ -38,16 +38,12 @@ import Crown from "../../assets/images/services/crown.png";
 import Ranking from "../../assets/images/services/ranking.png";
 import ProfileUser from "../../assets/images/services/profile-2user.png";
 import Timer from "../../assets/images/services/timer.png";
-
-import { ABOUT } from "../../constants";
+import { ABOUT, SERVICES } from "../../constants";
 
 const Home = () => {
   const serviceTabs = [
-    { id: "sellers", tab: "Best Sellers" },
-    { id: "tiktok", tab: "Tiktok" },
-    { id: "twitter", tab: "Twitter" },
-    { id: "instagram", tab: "Instagram" },
-    { id: "youtube", tab: "YouTube" },
+    { value: "sellers", label: "Best Sellers" },
+    ...SERVICES,
   ];
 
   const sellers = [
@@ -254,10 +250,10 @@ const Home = () => {
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  Our vision is to lay down the groundwork to create the
+                  Our mission is to lay down the groundwork to create the
                   framework for creators, artists, visionaries and etc. to
                   safely promote their brands, products, and collections. With
-                  this vision, we have started the work to build a trustworthy
+                  this mission, we have started the work to build a trustworthy
                   marketing agency and grew up to be one in 10 years of hard
                   work.
                   <br />
@@ -319,8 +315,8 @@ const Home = () => {
               {serviceTabs.map((tab, index) => (
                 <Tab
                   key={index}
-                  tab={tab.tab}
-                  id={tab.id}
+                  tab={tab.label}
+                  id={tab.value}
                   activeTab={activeTab}
                   setActiveTab={(id) => setActiveTab(id)}
                 />

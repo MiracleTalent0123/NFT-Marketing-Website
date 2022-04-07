@@ -48,10 +48,10 @@ export const ABOUT = [
 ];
 
 export const SERVICES = [
-  { label: "Tiktok", value: "tiktok" },
   { label: "Instagram", value: "instagram" },
-  { label: "YouTube", value: "youtube" },
   { label: "Twitter", value: "twitter" },
+  { label: "YouTube", value: "youtube" },
+  { label: "Tiktok", value: "tiktok" },
 ];
 
 export const HEADER_MENUS = [
