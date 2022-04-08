@@ -8,10 +8,6 @@ import HeroImage from "../../assets/images/hero_img.png";
 import About from "../../components/about";
 import { useState } from "react";
 import Tab from "../../components/Tab";
-import ServiceIcon1 from "../../assets/images/bitcoin-(btc).png";
-import ServiceIcon2 from "../../assets/images/binance-coin-(bnb).png";
-import ServiceIcon3 from "../../assets/images/theta-(theta).png";
-import ServiceIcon4 from "../../assets/images/nebulas-(nas).png";
 import Seller from "../../components/Service";
 import Client1 from "../../assets/images/Client-Logos_beckman-coulter.png";
 import Client2 from "../../assets/images/Client-Logos_John-Hancock.png";
@@ -38,35 +34,12 @@ import Crown from "../../assets/images/services/crown.png";
 import Ranking from "../../assets/images/services/ranking.png";
 import ProfileUser from "../../assets/images/services/profile-2user.png";
 import Timer from "../../assets/images/services/timer.png";
-import { ABOUT, SERVICES } from "../../constants";
+import { ABOUT, SERVICES, SELLERS } from "../../constants";
 
 const Home = () => {
   const serviceTabs = [
     { value: "sellers", label: "Best Sellers" },
     ...SERVICES,
-  ];
-
-  const sellers = [
-    {
-      icon: ServiceIcon1,
-      title: "Bitcoin Promotion",
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.",
-    },
-    {
-      icon: ServiceIcon2,
-      title: "Service 2",
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.",
-    },
-    {
-      icon: ServiceIcon3,
-      title: "Service 3",
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.",
-    },
-    {
-      icon: ServiceIcon4,
-      title: "Service 4",
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden.",
-    },
   ];
 
   const customers = [
@@ -331,9 +304,8 @@ const Home = () => {
                 cssClasses={["mt-4", "pt-2", "position-relative", "container"]}
                 direction={"row"}
                 justifyContent="space-between"
-                alignItems="center"
               >
-                {sellers.map((service, index) => (
+                {SELLERS.map((service, index) => (
                   <Seller
                     key={index}
                     icon={service.icon}
