@@ -26,9 +26,7 @@ import Bg5 from "../../assets/images/Ellipse_49.png";
 import Bg6 from "../../assets/images/Ellipse_48.png";
 import Bg7 from "../../assets/images/Ellipse_53.png";
 import Bg from "../../assets/images/bg.png";
-import Avatar from "../../assets/images/avatar.png";
-import AvatarLogo from "../../assets/images/t_logo.png";
-import Testimonial from "../../components/Testimonial";
+// import Testimonial from "../../components/Testimonial";
 import Service, { ServiceProps } from "../../components/common/Service";
 import Crown from "../../assets/images/services/crown.png";
 import Ranking from "../../assets/images/services/ranking.png";
@@ -53,79 +51,6 @@ const Home = () => {
     { image: Client1 },
     { image: Client2 },
     { image: Client4 },
-  ];
-
-  const testimonials = [
-    {
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
-      avatar: Avatar,
-      name: "Carl Mahnke",
-      role: "HYATT HOTELS",
-      logo: AvatarLogo,
-    },
-    {
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
-      avatar: Avatar,
-      name: "Carl Mahnke",
-      role: "HYATT HOTELS",
-      logo: AvatarLogo,
-    },
-    {
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
-      avatar: Avatar,
-      name: "Carl Mahnke",
-      role: "HYATT HOTELS",
-      logo: AvatarLogo,
-    },
-    {
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
-      avatar: Avatar,
-      name: "Carl Mahnke",
-      role: "HYATT HOTELS",
-      logo: AvatarLogo,
-    },
-    {
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
-      avatar: Avatar,
-      name: "Carl Mahnke",
-      role: "HYATT HOTELS",
-      logo: AvatarLogo,
-    },
-    {
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
-      avatar: Avatar,
-      name: "Carl Mahnke",
-      role: "HYATT HOTELS",
-      logo: AvatarLogo,
-    },
-    {
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
-      avatar: Avatar,
-      name: "Carl Mahnke",
-      role: "HYATT HOTELS",
-      logo: AvatarLogo,
-    },
-    {
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
-      avatar: Avatar,
-      name: "Carl Mahnke",
-      role: "HYATT HOTELS",
-      logo: AvatarLogo,
-    },
-    {
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
-      avatar: Avatar,
-      name: "Carl Mahnke",
-      role: "HYATT HOTELS",
-      logo: AvatarLogo,
-    },
-    {
-      desc: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
-      avatar: Avatar,
-      name: "Carl Mahnke",
-      role: "HYATT HOTELS",
-      logo: AvatarLogo,
-    },
   ];
 
   const blogs = [
@@ -530,7 +455,7 @@ const Home = () => {
             </Box>
           </Box>
         </div>
-        <div id="testimonials" className="section">
+        {/* <div id="testimonials" className="section">
           <p className="section-title text-center container" data-aos="zoom-in">
             Words From Our Clients
           </p>
@@ -582,7 +507,7 @@ const Home = () => {
               ))}
             </Slider>
           </Box>
-        </div>
+        </div> */}
         <div id="blogs" className="section position-relative">
           <Image src={Bg5} cssClasses={["background-8"]} />
           <Image src={Bg6} cssClasses={["background-9"]} />

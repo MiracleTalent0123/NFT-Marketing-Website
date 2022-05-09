@@ -71,6 +71,16 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
+              <li className="nav-item">
+                <ScrollLink
+                  activeClass="active"
+                  className="nav-link nav-animation-link white px-0 py-2 pointer"
+                  to={'contact'}
+                  spy={true}
+                >
+                  Contact
+                </ScrollLink>
+              </li>
             </ul>
           </div>
         </div>

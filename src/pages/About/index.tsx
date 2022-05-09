@@ -11,10 +11,10 @@ import ServiceIcon4 from "../../assets/images/crown.png";
 import ServiceIcon5 from "../../assets/images/flag.png";
 import ServiceIcon6 from "../../assets/images/coffee.png";
 import AboutService from "../../components/AboutService";
-import Avatar from "../../assets/images/about/avatar.png";
-import Team from "../../components/Team";
-import Slider from "react-slick";
-import SliderArrow from "../../components/common/SliderArrow";
+// import Avatar from "../../assets/images/about/avatar.png";
+// import Team from "../../components/Team";
+// import Slider from "react-slick";
+// import SliderArrow from "../../components/common/SliderArrow";
 import Bg from "../../assets/images/bg.png";
 import Bg4 from "../../assets/images/Ellipse_47.png";
 import Bg1 from "../../assets/images/about/Ellipse.png";
@@ -52,57 +52,6 @@ const AboutUs = () => {
       icon: ServiceIcon6,
       title: "Lorem Ipsum",
       desc: "If you are going to use a passage of    Lorem Ipsum, you need to be sure there   isn't anything embarrassing hidden.",
-    },
-  ];
-
-  const teams = [
-    {
-      avatar: Avatar,
-      name: "Michel Filip",
-      role: "Co Founder",
-      link: "",
-    },
-    {
-      avatar: Avatar,
-      name: "Michel Filip",
-      role: "Co Founder",
-      link: "",
-    },
-    {
-      avatar: Avatar,
-      name: "Michel Filip",
-      role: "Co Founder",
-      link: "",
-    },
-    {
-      avatar: Avatar,
-      name: "Michel Filip",
-      role: "Co Founder",
-      link: "",
-    },
-    {
-      avatar: Avatar,
-      name: "Michel Filip",
-      role: "Co Founder",
-      link: "",
-    },
-    {
-      avatar: Avatar,
-      name: "Michel Filip",
-      role: "Co Founder",
-      link: "",
-    },
-    {
-      avatar: Avatar,
-      name: "Michel Filip",
-      role: "Co Founder",
-      link: "",
-    },
-    {
-      avatar: Avatar,
-      name: "Michel Filip",
-      role: "Co Founder",
-      link: "",
     },
   ];
 
@@ -218,7 +167,7 @@ const AboutUs = () => {
           </Flex>
         </Box>
       </div>
-      <div className="section container">
+      {/* <div className="section container">
         <Box
           cssClasses={[
             "border-gradient",
@@ -275,7 +224,7 @@ const AboutUs = () => {
             </Box>
           </Box>
         </Box>
-      </div>
+      </div> */}
     </>
   );
 };
